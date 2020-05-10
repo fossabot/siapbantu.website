@@ -9,7 +9,9 @@
     "dev": "nodemon --inspect=0.0.0.0:9229 -L server.js",
     "test": "jest",
     "lint": "eslint . --fix",
-    "install-docker": "docker-compose run backend-service npm install"
+    "install-docker": "docker-compose run backend-service npm install",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -43,7 +45,8 @@
     "fluent-schema": "^0.10.0",
     "http-errors": "^1.7.3",
     "mongoose": "^5.9.6",
-    "node-cache": "^5.1.0"
+    "node-cache": "^5.1.0",
+    "snyk": "^1.319.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -56,8 +59,9 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
     "nock": "^12.0.3",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.3",
     "prettier": "^2.0.2",
     "supertest": "^4.0.2"
-  }
+  },
+  "snyk": true
 }
