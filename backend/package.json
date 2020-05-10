@@ -2,7 +2,7 @@
   "name": "siapbantu",
   "version": "1.0.0",
   "private": true,
-  "description": "Help to to fight global pandemics",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

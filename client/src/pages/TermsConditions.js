@@ -305,11 +305,11 @@ const TermsConditions = () => {
                     against Siapbantu and any Company Person that are in any way
                     related to the Services or your use of Content, including
                     any representations, recommendations or referrals you may
-                    receive as a result of your registration with Fight
-                    Pandemics. You are solely responsible for your use of the
-                    Services, for any Content you provide, and for any
-                    consequences thereof, including the use of your Content by
-                    other users and third-party partners.
+                    receive as a result of your registration with Siapbantu. You
+                    are solely responsible for your use of the Services, for any
+                    Content you provide, and for any consequences thereof,
+                    including the use of your Content by other users and
+                    third-party partners.
                   </li>
                   <li>
                     <i>Siapbantu Employees.</i> You understand that Company
@@ -323,13 +323,13 @@ const TermsConditions = () => {
               <li>
                 <strong>Confidentiality.</strong>
                 By registering with Siapbantu, or otherwise using the Services
-                or viewing content made available through Fight Pandemics in any
-                way, you may have an opportunity to see information deemed as
+                or viewing content made available through Siapbantu in any way,
+                you may have an opportunity to see information deemed as
                 confidential. It is expected that you will use discretion in
                 determining what you do with that information. You agree,
                 however, that you will not republish any information you acquire
                 through the Services via an Internet website, for which one of
-                the principal purposes is to compete with Fight Pandemics.
+                the principal purposes is to compete with Siapbantu.
               </li>
               <li>
                 <strong>Other User Obligations.</strong>
@@ -389,8 +389,8 @@ const TermsConditions = () => {
                   </li>
                   <li>
                     If you operate, manage or otherwise control a search engine
-                    or robot, or you republish a significant fraction of Fight
-                    Pandemics Content (as we may determine in our reasonable
+                    or robot, or you republish a significant fraction of
+                    Siapbantu Content (as we may determine in our reasonable
                     discretion), you must additionally follow these rules:
                     <ol>
                       <li>You must use a descriptive user agent header.</li>
@@ -415,8 +415,8 @@ const TermsConditions = () => {
                 & our Cookies Policy to learn more about how we collect and use
                 information about you via the Services. The Privacy & Cookies
                 Policy explains how Siapbantu treats your personal information
-                and protects your privacy when you access Fight Pandemics and
-                use the Services.
+                and protects your privacy when you access Siapbantu and use the
+                Services.
               </li>
               <li>
                 <strong>Amendments to the Privacy & Cookies Policy.</strong>
@@ -424,12 +424,9 @@ const TermsConditions = () => {
                 our sole discretion, effective upon posting the amended Privacy
                 Policy & Cookies Policy at the domain of{" "}
                 <TermsLink href="#">
-                  www.fightpandemics.com/privacy-policy
-                </TermsLink>{" "}
-                and{" "}
-                <TermsLink href="#">
-                  www.fightpandemics.com/cookies-policy
-                </TermsLink>{" "}
+                  siapbantu.com/privacy-policy
+                </TermsLink> and{" "}
+                <TermsLink href="#">siapbantu.com/cookies-policy</TermsLink>{" "}
                 where the prior version of the Privacy Policy & the Cookies
                 Policy was posted, or by communicating these changes through any
                 written or other contact method we have established with you.
@@ -440,12 +437,13 @@ const TermsConditions = () => {
               </li>
               <li>
                 <strong>Data Processing Addendum.</strong>
-                If you are a user to the Services, to the extent that Fight
-                Pandemics processes any Personal Data (as defined in the DPA)
-                that is subject to the GDPR (as defined in the DPA), on your
-                behalf, in the provision of the Services, the terms of the data
-                processing addendum at{" "}
-                <TermsLink href="#">www.fightpandemics.com/dpa</TermsLink>{" "}
+                If you are a user to the Services, to the extent that Siapbantu
+                processes any Personal Data (as defined in the DPA) that is
+                subject to the GDPR (as defined in the DPA), on your behalf, in
+                the provision of the Services, the terms of the data processing
+                addendum at <TermsLink href="#">
+                  siapbantu.com/dpa
+                </TermsLink>{" "}
                 ("DPA"), which are hereby incorporated by reference, shall apply
                 and the parties agree to comply with such terms. For the
                 purposes of the Standard Contractual Clauses referenced in the
@@ -484,7 +482,7 @@ const TermsConditions = () => {
                   <li>
                     attribute Siapbantu with a human and machine-followable link
                     (an anchor tag) linking back to the page displaying the
-                    original source of the Content on Fight Pandemics;
+                    original source of the Content on Siapbantu;
                   </li>
                   <li>
                     make a reasonable effort to update a particular piece of
@@ -612,8 +610,8 @@ const TermsConditions = () => {
               </li>
               <li>
                 <strong>Verifying Due Diligence.</strong>
-                We are not responsible for doing diligence on any User of Fight
-                Pandemics, or verifying any representations, materials or other
+                We are not responsible for doing diligence on any User of
+                Siapbantu, or verifying any representations, materials or other
                 information provided by other Users to you.
               </li>
               <li>
@@ -695,11 +693,11 @@ const TermsConditions = () => {
                 if you believe that any material on the Services violates this
                 Agreement or your intellectual property rights, please notify
                 the Company as soon as possible by sending an email to{" "}
-                <TermsLink href="mailto:legal@fightpandemics">
-                  legal@fightpandemics.com
+                <TermsLink href="mailto:legal@siapbantu.com">
+                  legal@siapbantu.com
                 </TermsLink>
-                , or by mailing a letter to the corporate address of Fight
-                Pandemics (listed below) containing the following information in
+                , or by mailing a letter to the corporate address of Siapbantu
+                (listed below) containing the following information in
                 accordance with the DMCA: (i) identification of the material
                 that is claimed to be infringing or to be the subject of
                 infringing activity and that is to be removed or access to which
@@ -729,8 +727,8 @@ const TermsConditions = () => {
                 <i>Dover, Delaware</i> <br />
                 <i>
                   Email:{" "}
-                  <TermsLink href="mailto:legal@fightpandemics.com">
-                    legal@fightpandemics.com
+                  <TermsLink href="mailto:legal@siapbantu.com">
+                    legal@siapbantu.com
                   </TermsLink>
                 </i>
               </li>
@@ -847,9 +845,9 @@ const TermsConditions = () => {
                 maintained by the Services. We make no warranty that the
                 Services will meet your requirements or be available on an
                 uninterrupted, secure or error-free basis. No advice or
-                information, whether oral or written, obtained from Fight
-                Pandemics or through the Services, will create any warranty not
-                expressly made herein.
+                information, whether oral or written, obtained from Siapbantu or
+                through the Services, will create any warranty not expressly
+                made herein.
               </li>
               <li>
                 UNDER NO CIRCUMSTANCES WILL ANY COMPANY PERSON BE LIABLE TO YOU
@@ -896,8 +894,8 @@ const TermsConditions = () => {
                 initiating any arbitration. Such informal negotiations commence
                 upon written notice from one person to the other. You will send
                 your notice to{" "}
-                <TermsLink href="mailto:legal@fightpandemics">
-                  legal@fightpandemics.com
+                <TermsLink href="mailto:legal@siapbantu.com">
+                  legal@siapbantu.com
                 </TermsLink>
                 , ATTENTION: LEGAL DEPARTMENT. The Company will send its notice
                 to your address as set forth in the books and records of the
@@ -994,8 +992,8 @@ const TermsConditions = () => {
                 the Agreement (or accepted any subsequent changes to the
                 Agreement), you may reject any such change by sending us written
                 notice (including by electronic mail to{" "}
-                <TermsLink href="mailto:legal@fightpandemics">
-                  legal@fightpandemics.com
+                <TermsLink href="mailto:legal@siapbantu.com">
+                  legal@siapbantu.com
                 </TermsLink>
                 ) within 30 days of the date such change became effective, as
                 indicated in the “Last Updated” date below or in the date of
@@ -1064,14 +1062,13 @@ const TermsConditions = () => {
                 <strong>Amendments to this Agreement.</strong>
                 We may amend this Agreement at any time in our sole discretion,
                 effective upon posting the amended Terms of Service at the
-                domain of www.fightpandemics.com/terms-conditions where the
-                prior version of this Agreement was posted or by communicating
-                these changes through any written or other contact method we
-                have established with you. Your use of the Services following
-                the date on which such amended Terms are published will
-                constitute consent to such amendments. Neither the course of
-                conduct between the parties nor trade practice will act to
-                modify this Agreement.
+                domain of siapbantu.com/terms-conditions where the prior version
+                of this Agreement was posted or by communicating these changes
+                through any written or other contact method we have established
+                with you. Your use of the Services following the date on which
+                such amended Terms are published will constitute consent to such
+                amendments. Neither the course of conduct between the parties
+                nor trade practice will act to modify this Agreement.
               </li>
               <li>
                 <strong>Venue and Governing Law.</strong>
@@ -1257,21 +1254,21 @@ const TermsConditions = () => {
                 specifically allowed to do so in a separate Agreement with
                 Siapbantu (note crawling the Services is permissible in
                 accordance with this Agreement, but scraping the Services is
-                expressly prohibited without the prior consent of Fight
-                Pandemics); remove, obscure or change any copyright, trademark,
-                hyperlink or other proprietary rights notices contained in or on
-                the Services or any website on which the Services are offered or
-                on a third party website and/or Company software on which
-                Company code is embeddable or embedded on; remove, obscure or
-                change any notice, banner, advertisement or other branding on
-                the Services; submit any Content or material that falsely
-                expresses or implies that such Content or material is sponsored
-                or endorsed by the Company; interfere with or circumvent any
-                security feature of the Services or any feature that restricts
-                or enforces limitations on use of or access to the Services,
-                such as probing or scanning the vulnerability of any system,
-                network or breach; or sell access to the Services or any part
-                thereof other than through a mechanism approved by the Company.
+                expressly prohibited without the prior consent of Siapbantu);
+                remove, obscure or change any copyright, trademark, hyperlink or
+                other proprietary rights notices contained in or on the Services
+                or any website on which the Services are offered or on a third
+                party website and/or Company software on which Company code is
+                embeddable or embedded on; remove, obscure or change any notice,
+                banner, advertisement or other branding on the Services; submit
+                any Content or material that falsely expresses or implies that
+                such Content or material is sponsored or endorsed by the
+                Company; interfere with or circumvent any security feature of
+                the Services or any feature that restricts or enforces
+                limitations on use of or access to the Services, such as probing
+                or scanning the vulnerability of any system, network or breach;
+                or sell access to the Services or any part thereof other than
+                through a mechanism approved by the Company.
               </li>
               <li>
                 "Content" means any information, text, graphics or other
@@ -1292,8 +1289,8 @@ const TermsConditions = () => {
             on a system or network at the direction of a user, and referral or
             linkage of users to an online location using information location
             tools, each through the Site located at{" "}
-            <TermsLink href="https://www.fightpandemics.com">
-              https://www.fightpandemics.com
+            <TermsLink href="https://siapbantu.com">
+              https://siapbantu.com
             </TermsLink>{" "}
             and any linked pages or applications owned and operated by the
             Company.
@@ -1301,7 +1298,7 @@ const TermsConditions = () => {
         </Paragraph>
         <Paragraph>
           <i>
-            The Services are operated and provided by Fightpandemics, Inc. 9 E
+            The Services are operated and provided by Siapbantu, Inc. 9 E
             Loockerman Street Suite 311, Dover, Delaware (19901) If you have
             questions about this Agreement, please contact us.
           </i>
@@ -1309,7 +1306,7 @@ const TermsConditions = () => {
         <Paragraph>
           <i>
             Last updated: April 23rd, 2020 · Siapbantu is a trademark of
-            Fightpandemics, Inc.
+            Siapbantu, Inc.
           </i>
         </Paragraph>
       </TextContainer>
