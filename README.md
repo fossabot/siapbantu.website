@@ -15,14 +15,15 @@ Saat ini project dalam tahap _development_, dan sedang dikembangkan oleh [Team S
 All forms of (positive) contribution is welcome to Siapbantu. Be sure to check out the [contribution guidelines](.github/CONTRIBUTING.md) before contributing.
 
 ## Technologies
+
 - **Frontend**
-    - React Hooks, Ant Design, Ant Design Mobile,  styled-components
-    - Mobile first design
+  - React Hooks, Ant Design, Ant Design Mobile, styled-components
+  - Mobile first design
 - **Backend**
-    - Fastify, MongoDB
-    - Auth0, Google Maps API
+  - Fastify, MongoDB
+  - Auth0, Google Maps API
 - **DevOps**
-    - Docker
+  - Docker
 
 ## DOCS (COMING SOON)
 
