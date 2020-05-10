@@ -1,7 +1,0 @@
-*.env
-/data
-/geo-service/venv
-**/node_modules
-.vscode
-.terraform
-backend.tf
