@@ -203,7 +203,7 @@ module ApplicationHelper
   end
 
   def google_analytics_id
-    Rails.env.production? ? 'UA-162054776-1' : 'UA-162054776-2'
+    Rails.env.production? ? 'UA-164812794-1' : 'UA-164812794-1'
   end
 
   def track_ga_event_if_needed

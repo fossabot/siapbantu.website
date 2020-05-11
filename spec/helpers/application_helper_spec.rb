@@ -56,17 +56,17 @@ RSpec.describe ApplicationHelper do
   describe '#google_analytics_id' do
     it 'returns the dev account id for development mode (ends in -2)' do
       allow(Rails).to receive(:env) { 'development'.inquiry }
-      expect(google_analytics_id).to eq('UA-162054776-2')
+      expect(google_analytics_id).to eq('UA-164812794-1')
     end
 
     it 'returns the dev account id for test mode (ends in -2)' do
       allow(Rails).to receive(:env) { 'test'.inquiry }
-      expect(google_analytics_id).to eq('UA-162054776-2')
+      expect(google_analytics_id).to eq('UA-164812794-1')
     end
 
     it 'returns the real account id for production mode (ends in -1)' do
       allow(Rails).to receive(:env) { 'production'.inquiry }
-      expect(google_analytics_id).to eq('UA-162054776-1')
+      expect(google_analytics_id).to eq('UA-164812794-1')
     end
   end
 end
