@@ -152,7 +152,7 @@ If you are already on an existing project or feel that you are not the right fit
 Please let me know if you have any questions or concerns.
 
 Thank you!
-HWC Core team
+Siapbantu Core team
 `;
 
     const mailHref = `mailto:${projectOwnerEmail}?reply-to=${projectOwnerEmail}&bcc=${volunteerEmails
