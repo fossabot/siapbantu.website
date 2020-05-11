@@ -72,6 +72,18 @@ jobs: # a collection of steps
   test:
     docker: # run the steps with Docker
       - image: circleci/ruby:2.6.3-stretch-node # ...with this image as the primary container; this is where all `steps` will run
+        environment: # environment variables for primary container
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          PGHOST: 127.0.0.1
+          PGUSER: circleci-demo-ruby
+          RAILS_ENV: test
+      - image: circleci/postgres:9.5-alpine # database image
+        environment: # environment variables for database
+          POSTGRES_USER: circleci-demo-ruby
+          POSTGRES_DB: rails_blog
+          POSTGRES_PASSWORD: ""
     steps:
       - checkout
       # Setup bundler -- any way for image cache to include this?
@@ -88,6 +100,37 @@ jobs: # a collection of steps
           name: Bundle Install
           command: bundle check --path vendor/bundle || bundle install --deployment
 
+      # Store bundle cache for Ruby dependencies
+      - save_cache:
+          key: siapbantu-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+      # Only necessary if app uses webpacker or yarn in some other way
+      - restore_cache:
+          keys:
+            - siapbantu-yarn-{{ checksum "yarn.lock" }}
+            - siapbantu-yarn-
+
+      - run:
+          name: Yarn Install
+          command: yarn install --cache-folder ~/.cache/yarn
+
+      # Store yarn / webpacker cache
+      - save_cache:
+          key: siapbantu-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
+      - run:
+          name: Wait for DB
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - run:
+          name: Database setup
+          # command: bin/rails db:schema:load --trace
+          command: bin/rails db:setup --trace
+
       - run:
           name: Run rspec in parallel
           command: |
@@ -102,6 +145,18 @@ jobs: # a collection of steps
   rubocop:
     docker: # run the steps with Docker
       - image: circleci/ruby:2.6.3-stretch-node # ...with this image as the primary container; this is where all `steps` will run
+        environment: # environment variables for primary container
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          PGHOST: 127.0.0.1
+          PGUSER: circleci-demo-ruby
+          RAILS_ENV: test
+      - image: circleci/postgres:9.5-alpine # database image
+        environment: # environment variables for database
+          POSTGRES_USER: circleci-demo-ruby
+          POSTGRES_DB: rails_blog
+          POSTGRES_PASSWORD: ""
     steps:
       - checkout
       - run:
@@ -116,6 +171,37 @@ jobs: # a collection of steps
       - run:
           name: Bundle Install
           command: bundle check --path vendor/bundle || bundle install --deployment
+
+      # Store bundle cache for Ruby dependencies
+      - save_cache:
+          key: siapbantu-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+      # Only necessary if app uses webpacker or yarn in some other way
+      - restore_cache:
+          keys:
+            - siapbantu-yarn-{{ checksum "yarn.lock" }}
+            - siapbantu-yarn-
+
+      - run:
+          name: Yarn Install
+          command: yarn install --cache-folder ~/.cache/yarn
+
+      # Store yarn / webpacker cache
+      - save_cache:
+          key: siapbantu-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
+      - run:
+          name: Wait for DB
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - run:
+          name: Database setup
+          # command: bin/rails db:schema:load --trace
+          command: bin/rails db:setup --trace
 
       - run:
           name: Rubocop
