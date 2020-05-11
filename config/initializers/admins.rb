@@ -1,0 +1,1 @@
+ADMINS = ENV['ADMINS']&.split(',') || []

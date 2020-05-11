@@ -1,0 +1,36 @@
+Hey there!
+
+You got a new volunteer for your project <%= @project.name %>!
+
+Current volunteers are visible on your project page: <%= url_for project_url(@project) %>.
+
+Volunteer Details:
+------------------
+
+Name: <%= @user.name %>
+Email: <%= @user.email %>
+<%- if @user.skill_list.present? %>
+Skills: <%= @user.skill_list.join(', ') %>
+<%- end -%>
+<%- if @user.level_of_availability.present? %>
+Level of Availability: <%= @user.level_of_availability %>
+<%- end -%>
+<%- if @user_volunteered_projects_count > 2 -%>
+Volunteered in: <%= @user_volunteered_projects_count - 1 %> other projects
+<%- end -%>
+<% if @note.present? -%>
+Message from volunteer: <%= @note %>
+<%- end -%>
+
+About:
+<%= @user.about %>
+
+
+
+Notes:
+<%- if @project.volunteered_users.count >= VOLUNTEERS_REQUIRED_FOR_FUNDING %>
+* ** Since you have over <%= VOLUNTEERS_REQUIRED_FOR_FUNDING %> volunteers you can now apply for funding. Visit your project page. **
+<%- end -%>
+
+- Your friends at siapbantu.com
+For any feedback or questions regarding siapbantu.com, let us know at https://discord.gg/8nAJfFN.
