@@ -74,6 +74,20 @@ jobs: # a collection of steps
       - image: circleci/ruby:2.6.3-stretch-node # ...with this image as the primary container; this is where all `steps` will run
     steps:
       - checkout
+      # Setup bundler -- any way for image cache to include this?
+      - run:
+          name: Install bundler
+          command: gem install bundler:2.1.4
+
+      - restore_cache:
+          keys:
+            - siapbantu-{{ checksum "Gemfile.lock" }}
+            - siapbantu-
+
+      - run:
+          name: Bundle Install
+          command: bundle check --path vendor/bundle || bundle install --deployment
+
       - run:
           name: Run rspec in parallel
           command: |
@@ -90,6 +104,19 @@ jobs: # a collection of steps
       - image: circleci/ruby:2.6.3-stretch-node # ...with this image as the primary container; this is where all `steps` will run
     steps:
       - checkout
+      - run:
+          name: Install bundler
+          command: gem install bundler:2.1.4
+
+      - restore_cache:
+          keys:
+            - siapbantu-{{ checksum "Gemfile.lock" }}
+            - siapbantu-
+
+      - run:
+          name: Bundle Install
+          command: bundle check --path vendor/bundle || bundle install --deployment
+
       - run:
           name: Rubocop
           command: bundle exec rubocop
