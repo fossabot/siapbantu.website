@@ -2,7 +2,7 @@
   "name": "siapbantu",
   "private": true,
   "scripts": {
-    "deploy-staging": "git push heroku master",
+    "deploy-staging": "git push heroku $(git rev-parse --abbrev-ref HEAD):master",
     "snyk-protect": "snyk protect",
     "prepare": "yarn run snyk-protect"
   },
