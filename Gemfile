@@ -76,8 +76,8 @@ gem 'rinku'
 gem 'aws-sdk-ses'
 gem 'aws-sdk-rails'
 
-# File storage S3
-gem "aws-sdk-s3", require: false
+# File storage AzureStorage
+gem 'azure-storage-blob'
 
 # Image processing
 gem 'image_processing'
