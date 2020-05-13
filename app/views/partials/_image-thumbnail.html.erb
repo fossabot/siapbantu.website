@@ -1,7 +1,7 @@
 <div class="relative overflow-hidden">
   <div class="inline-block">
     <% if project.image.representable? %>
-      <%= link_to project.image, class: 'inline-block', 'data-fancybox': 'hwc-gallery' do %>
+      <%= link_to project.image, class: 'inline-block', 'data-fancybox': 'sb-gallery' do %>
         <%= image_tag project.cover_photo %>
       <% end %>
     <% else %>
