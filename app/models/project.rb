@@ -25,6 +25,8 @@ class Project < ApplicationRecord
 
       Rails.cache.delete(cache_key) if featured_projects.map(&:id).include? self.id
     end
+
+    Rails.cache.delete "project_cdn_cover_photo_#{id}"
   end
 
   validates :status, inclusion: { in: ALL_PROJECT_STATUS }
@@ -95,29 +97,31 @@ class Project < ApplicationRecord
 
   # Because Active Storage doesn't support serving files through cloudfront (or any other way)
   # we need to manually strip the S3 path and prepend it with the CDN url
-  def self.cloudfront_url(url)
+  def cdn_url(url)
     regex = /.*amazonaws\.com(\/variants\/.*\/.*)\?/
     path = regex.match(url).captures
 
     return url if path.nil?
 
-    cdn_url = "https://d2gcnyroy2e8vq.cloudfront.net"
+    cdn_url = "https://d2ihxs4lxydh3r.cloudfront.net"
 
     "#{cdn_url}#{path.first}"
   end
 
   def cover_photo(category_override = nil)
-    if self.image.present?
-      resized_variant = self.image.variant(resize_to_limit: [600, 600])
+    Rails.cache.fetch("project_cdn_cover_photo_#{id}_#{category_override}", expires_in: 1.month) do
+      if self.image.present?
+        resized_variant = self.image.variant(resize_to_limit: [600, 600])
 
-      begin
-        # Making sure the variant is processed before serving
-        Project.cloudfront_url(resized_variant.processed.service_url)
-      rescue
-        Project.cloudfront_url(resized_variant.service_url)
+        begin
+          # Making sure the variant is processed before serving
+          cdn_url(resized_variant.processed.service_url)
+        rescue
+          resized_variant.service_url
+        end
+      else
+        "/images/#{category_override.blank? ? self.category.downcase : category_override.downcase}-default.jpg"
       end
-    else
-      "/images/#{category_override.blank? ? self.category.downcase : category_override.downcase}-default.jpg"
     end
   end
 
