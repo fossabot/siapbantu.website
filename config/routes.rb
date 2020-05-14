@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :posts
   # Redirect www to non-www.
   if ENV['CANONICAL_HOST']
     constraints(host: Regexp.new("^(?!#{Regexp.escape(ENV['CANONICAL_HOST'])})")) do
@@ -37,6 +36,8 @@ Rails.application.routes.draw do
   get '/media', to: 'offers#index', as: 'media'
 
   resources :offers
+
+  resources :success_stories
 
   scope 'admin' do
     post :delete_user, to: 'admin#delete_user', as: 'delete_user'
