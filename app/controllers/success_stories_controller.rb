@@ -62,11 +62,11 @@ class SuccessStoriesController < ApplicationController
   end
 
   private
-  def set_success_story
-    @success_story = SuccessStory.find(params[:id])
-  end
+    def set_success_story
+      @success_story = SuccessStory.find(params[:id])
+    end
 
-  def success_story_params
-    params.fetch(:success_story, {}).permit(:title, :body, :links, :image, :project_ids)
-  end
+    def success_story_params
+      params.fetch(:success_story, {}).permit(:title, :body, :links, :image, :project_ids)
+    end
 end
