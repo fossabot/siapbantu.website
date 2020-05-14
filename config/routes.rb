@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  get '/about', to: 'home#about', as: 'about'
+  get '/tentang-kami', to: 'home#about', as: 'about'
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
   devise_scope :user do
