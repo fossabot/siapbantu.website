@@ -8,31 +8,31 @@ AllCops:
   # to ignore them, so only the ones explicitly set in this file are enabled.
   DisabledByDefault: true
   Exclude:
-    - "**/node_modules/**/*"
-    - "**/tmp/**/*"
-    - "**/templates/**/*"
-    - "**/vendor/**/*"
-    - "actionpack/lib/action_dispatch/journey/parser.rb"
-    - "actionmailbox/test/dummy/**/*"
-    - "actiontext/test/dummy/**/*"
-    - "bin/*"
-    - "db/schema.rb"
-    - "db/migrate/*"
-    - "railties/test/fixtures/tmp/**/*"
+    - '**/node_modules/**/*'
+    - '**/tmp/**/*'
+    - '**/templates/**/*'
+    - '**/vendor/**/*'
+    - 'actionpack/lib/action_dispatch/journey/parser.rb'
+    - 'actionmailbox/test/dummy/**/*'
+    - 'actiontext/test/dummy/**/*'
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'railties/test/fixtures/tmp/**/*'
 
 Performance:
   Exclude:
-    - "**/test/**/*"
+    - '**/test/**/*'
 
 # Prefer assert_not over assert !
 Rails/AssertNot:
   Include:
-    - "**/test/**/*"
+    - '**/test/**/*'
 
 # Prefer assert_not_x over refute_x
 Rails/RefuteMethods:
   Include:
-    - "**/test/**/*"
+    - '**/test/**/*'
 
 # Prefer &&/|| over and/or.
 Style/AndOr:
@@ -136,14 +136,14 @@ Style/FrozenStringLiteralComment:
   Enabled: false
   EnforcedStyle: always
   Exclude:
-    - "actionview/test/**/*.builder"
-    - "actionview/test/**/*.ruby"
-    - "actionpack/test/**/*.builder"
-    - "actionpack/test/**/*.ruby"
-    - "activestorage/db/migrate/**/*.rb"
-    - "activestorage/db/update_migrate/**/*.rb"
-    - "actionmailbox/db/migrate/**/*.rb"
-    - "actiontext/db/migrate/**/*.rb"
+    - 'actionview/test/**/*.builder'
+    - 'actionview/test/**/*.ruby'
+    - 'actionpack/test/**/*.builder'
+    - 'actionpack/test/**/*.ruby'
+    - 'activestorage/db/migrate/**/*.rb'
+    - 'activestorage/db/update_migrate/**/*.rb'
+    - 'actionmailbox/db/migrate/**/*.rb'
+    - 'actiontext/db/migrate/**/*.rb'
 
 Style/RedundantFreeze:
   Enabled: true
