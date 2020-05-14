@@ -79,9 +79,6 @@ gem 'aws-sdk-rails'
 # File storage S3
 gem "aws-sdk-s3", require: false
 
-# Sentry
-gem "sentry-raven"
-
 # Image processing
 gem 'image_processing'
 

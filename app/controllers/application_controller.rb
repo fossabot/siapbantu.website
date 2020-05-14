@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery prepend: true, with: :exception
   before_action :show_global_announcements
   before_action :set_bg_gray
-  before_action :set_raven_context
 
   def ensure_admin
     redirect_to projects_path if !current_user || !current_user.is_admin?
@@ -54,9 +53,4 @@ class ApplicationController < ActionController::Base
     def track_event(event_name)
       session[:track_event] = event_name
     end
-
-  def set_raven_context
-    Raven.user_context(id: session[:current_user_id])
-    Raven.extra_context(params: params.to_unsafe_h, url: request.url)
-  end
 end
