@@ -77,7 +77,7 @@ gem 'aws-sdk-ses'
 gem 'aws-sdk-rails'
 
 # File storage S3
-gem "aws-sdk-s3", require: true
+gem "aws-sdk-s3", require: false
 
 # Image processing
 gem 'image_processing'
