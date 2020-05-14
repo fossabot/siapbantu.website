@@ -16,6 +16,13 @@ require 'action_cable/engine'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# Sentry Logging
+Raven.configure do |config|
+  config.dsn = ENV['SENTRY_DSN']
+end
+
+config.filter_parameters << :password
+
 # Initialize dotenv before booting the main application
 if Rails.env.development? || Rails.env.test?
   Dotenv::Railtie.load
