@@ -33,6 +33,8 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/media', to: 'offers#index', as: 'media'
+
   resources :offers
 
   scope 'admin' do
