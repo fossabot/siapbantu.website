@@ -24,7 +24,8 @@ test:
   <<: *default
   host: localhost
   username: postgres
-  database: siapbantu_test
+  database: postgres
+  password: postgres
 
 production:
   <<: *default
