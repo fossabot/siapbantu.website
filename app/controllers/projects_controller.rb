@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
     @show_global_announcements = false
     @applied_filters = params.dup
 
-    if request.path != projects_path and params[:category_slug].present?
+    if (request.path != projects_path) && params[:category_slug].present?
       @project_category = Settings.project_categories.find { |category| category.slug == params[:category_slug] }
 
       raise ActionController::RoutingError, 'Not Found' if @project_category.blank?
@@ -205,11 +205,11 @@ class ProjectsController < ApplicationController
     def ensure_no_legacy_filtering
       new_params = {}
 
-      if params[:skills].present? and params[:skills].include? ','
+      if params[:skills].present? && params[:skills].include?(',')
         new_params[:skills] = params[:skills].split(',')
       end
 
-      if params[:project_types].present? and params[:project_types].include? ','
+      if params[:project_types].present? && params[:project_types].include?(',')
         new_params[:project_types] = params[:project_types].split(',')
       end
 

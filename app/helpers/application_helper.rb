@@ -106,7 +106,7 @@ module ApplicationHelper
 
     applied = get_query_params[filter_by].include?(label)
 
-    if filter_by == 'project_types' and @applied_project_types.present? and @applied_project_types.include?(label)
+    if (filter_by == 'project_types') && @applied_project_types.present? && @applied_project_types.include?(label)
       applied = true
     end
 
@@ -125,7 +125,7 @@ module ApplicationHelper
       classes += ' bg-indigo-300' if applied
     end
 
-    render partial: 'partials/filter-badge', locals: {label: label, url: url, classes: classes, title: title, color: color}
+    render partial: 'partials/filter-badge', locals: { label: label, url: url, classes: classes, title: title, color: color }
   end
 
   def clear_filter_badge(label: nil, model: nil, filter_by: nil, color: nil, title: nil)
@@ -136,7 +136,7 @@ module ApplicationHelper
     classes = 'bg-gray-100 text-gray-800'
     classes += ' bg-gray-200' if get_query_params[filter_by].length == 0
 
-    render partial: 'partials/filter-badge', locals: {label: label, url: url, classes: classes, title: title, color: 'gray'}
+    render partial: 'partials/filter-badge', locals: { label: label, url: url, classes: classes, title: title, color: 'gray' }
   end
 
   def get_query_params
@@ -201,13 +201,13 @@ module ApplicationHelper
   end
 
   def format_country(country)
-    return country if (country == '' || country == 'Global')
+    return country if country == '' || country == 'Global'
 
     begin
-      return IsoCountryCodes.find(country).name
+      IsoCountryCodes.find(country).name
     rescue
       # Fallback to raw value
-      return country
+      country
     end
   end
 
@@ -221,7 +221,7 @@ module ApplicationHelper
   end
 
   def filter_bar_filter(label, filter, options)
-    render partial: 'projects/filter-bar-filter', locals: {options: options, label: label, filter: filter.to_s}
+    render partial: 'projects/filter-bar-filter', locals: { options: options, label: label, filter: filter.to_s }
   end
 
   def google_analytics_id
@@ -236,6 +236,6 @@ module ApplicationHelper
   end
 
   def list_cards(&block)
-    return "<div class='w-full px-4 sm:px-0 space-y-bottom-4 sm:grid grid-cols-2 lg:grid-cols-3 sm:gap-6 grid-auto-row-1fr'>#{capture(&block)}</div>".html_safe
+    "<div class='w-full px-4 sm:px-0 space-y-bottom-4 sm:grid grid-cols-2 lg:grid-cols-3 sm:gap-6 grid-auto-row-1fr'>#{capture(&block)}</div>".html_safe
   end
 end

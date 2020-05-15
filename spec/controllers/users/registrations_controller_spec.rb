@@ -201,7 +201,7 @@ RSpec.describe Users::RegistrationsController, type: :controller do
     end
 
     context 'when volunteer does not exist' do
-      let(:user) { double(id: 9999)}
+      let(:user) { double(id: 9999) }
 
       it { is_expected.to_not be_successful }
 
