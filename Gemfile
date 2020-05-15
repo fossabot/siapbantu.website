@@ -35,14 +35,15 @@ gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
 gem 'rubocop-performance', require: false
 
+# Test
+gem 'brakeman'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 4.0.0.rc1'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
-  gem 'brakeman'
-  gem 'bundler-audit'
 end
 
 group :development do

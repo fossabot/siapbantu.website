@@ -46,7 +46,6 @@ jobs:
           bundle exec rubocop --parallel
       - name: Run security checks
         run: |
-          bundle exec bundler-audit --update
           bundle exec brakeman -q -w2
 
   tests:
@@ -56,8 +55,8 @@ jobs:
       postgres:
         image: postgres:11
         env:
-          POSTGRES_USER: myapp
-          POSTGRES_DB: myapp_test
+          POSTGRES_USER: postgres
+          POSTGRES_DB: siapbantu_test
           POSTGRES_PASSWORD: ""
         ports: ["5432:5432"]
 
