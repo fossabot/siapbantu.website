@@ -23,9 +23,8 @@ All forms of (positive) contribution is welcome to Siapbantu. Be sure to check o
   - Tailwind CSS
 - **DevOps**
   - Docker
-  - CircleCI
-  - Terraform
-  - AWS
+  - AWS S3
+  - AWS CloudFront
 
 ## DOCS (COMING SOON)
 
