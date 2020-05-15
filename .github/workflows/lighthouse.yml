@@ -1,0 +1,24 @@
+name: Deploy
+on:
+  completion:
+    success:
+      - Verify
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sleep for 5 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+          time: '30s'
+      - uses: actions/checkout@v1
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v2
+        with:
+          urls: 'https://siapbantu.com/'
+      - name: Save results
+        uses: actions/upload-artifact@v1
+        with:
+          name: lighthouse-results
+          path: '.lighthouseci'
