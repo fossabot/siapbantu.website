@@ -2,16 +2,16 @@ name: Lighthouse
 on:
   completion:
     success:
-      - Verify
+      - Deploy
 
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
-      - name: Sleep for 5 seconds
+      - name: Sleep for 5 minutes
         uses: jakejarvis/wait-action@master
         with:
-          time: '30s'
+          time: '5m'
       - uses: actions/checkout@v1
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
