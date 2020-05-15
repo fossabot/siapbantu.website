@@ -1,4 +1,4 @@
-name: Deploy
+name: Lighthouse
 on:
   completion:
     success:

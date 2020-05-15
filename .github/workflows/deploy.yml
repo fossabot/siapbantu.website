@@ -2,7 +2,7 @@ name: Deploy
 on:
   completion:
     success:
-      - Verify
+      - Lighthouse
 
 jobs:
   linters:
