@@ -103,6 +103,3 @@ jobs:
           PGUSER: postgres
         run: |
           bundle exec rails db:setup
-
-      - name: Run tests
-        run: bundle exec rails spec
