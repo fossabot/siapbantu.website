@@ -12,12 +12,12 @@ jobs:
 
       - name: Deploy
         uses: Suvink/heroku-static@v0.3
-          with:
-            heroku_app_name: siapbantu
-            heroku_email: human@shitiomatic.email
-            dontuseforce: false #Disable force push [optional]
-            buildpack: heroku/ruby
-          env:
-            HEROKU_TOKEN: '${{ secrets.HEROKU_API_KEY }}'
-            BOT_TOKEN: '${{ secrets.BOT_TOKEN }}'
-            CHAT_ID: '${{ secrets.CHAT_ID }}'
+        with:
+          heroku_app_name: siapbantu
+          heroku_email: human@shitiomatic.email
+          dontuseforce: false #Disable force push [optional]
+          buildpack: heroku/ruby
+        env:
+          HEROKU_TOKEN: '${{ secrets.HEROKU_API_KEY }}'
+          BOT_TOKEN: '${{ secrets.BOT_TOKEN }}'
+          CHAT_ID: '${{ secrets.CHAT_ID }}'
