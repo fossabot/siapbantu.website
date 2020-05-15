@@ -41,6 +41,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0.rc1'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
+  gem 'brakeman'
+  gem 'bundler-audit'
 end
 
 group :development do
