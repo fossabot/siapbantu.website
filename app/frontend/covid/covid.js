@@ -178,7 +178,7 @@ const Covid = {
 
     if (!['jpg', 'jpeg', 'png'].includes(extFile)) {
       element.value = null
-      alert('Only jpg/jpeg and png files are allowed!');
+      alert('Hanya file jpg/jpeg dan png yang diizinkan!');
       return false
     }
 

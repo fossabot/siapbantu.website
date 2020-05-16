@@ -32,15 +32,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b4f3999c-81f2-4973-bef2-baea36f10c8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/volunteer_groups_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/volunteer_groups_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/images_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/images_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/offers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/offers_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/projects_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/projects_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/success_stories_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/success_stories_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/_project-category.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_project-category.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/partials/_featured-projects.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/_featured-projects.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/covid/covid.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/covid/covid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/covid/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/covid/project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/covid/volunteer_groups.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/covid/volunteer_groups.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/_profile_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/_profile_form.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +170,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589615588851</updated>
-      <workItem from="1589615593222" duration="8539000" />
+      <workItem from="1589615593222" duration="11479000" />
     </task>
     <task id="LOCAL-00001" summary="Remove docker">
       <created>1589626659054</created>
@@ -191,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589626948617</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update first translated #1">
+      <created>1589632409076</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589632409076</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,13 +214,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Remove docker" />
     <MESSAGE value="Karya populer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Karya populer" />
+    <MESSAGE value="Update first translated #1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update first translated #1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="170" width="519" height="388" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589618217200">
+    <state x="421" y="170" width="519" height="388" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589635230786">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="421" y="170" width="519" height="388" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1589618217200" />
+    <state x="421" y="170" width="519" height="388" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1589635230786" />
     <state width="1324" height="174" key="GridCell.Tab.0.bottom" timestamp="1589615630486">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -235,13 +238,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1324" height="174" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1589615630485" />
-    <state x="278" y="101" width="806" height="526" key="Vcs.Push.Dialog.v2" timestamp="1589626959987">
+    <state x="278" y="101" width="806" height="526" key="Vcs.Push.Dialog.v2" timestamp="1589632418427">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="278" y="101" width="806" height="526" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1589626959987" />
-    <state x="263" y="100" width="810" height="558" key="find.popup" timestamp="1589631786142">
+    <state x="278" y="101" width="806" height="526" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1589632418427" />
+    <state x="263" y="100" width="810" height="558" key="find.popup" timestamp="1589634962297">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="263" y="100" width="810" height="558" key="find.popup/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1589631786142" />
+    <state x="263" y="100" width="810" height="558" key="find.popup/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1589634962297" />
   </component>
 </project>
