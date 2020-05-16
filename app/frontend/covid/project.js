@@ -22,8 +22,8 @@ const Project = {
 
     const targetHref = $(that).attr('href');
 
-    const headerHTML = "This project is not accepting volunteers";
-    const bodyHTML = "We're sorry. This project has indicated that they have all the volunteers they need at this time.";
+    const headerHTML = "Karya ini tidak menerima sukarelawan";
+    const bodyHTML = "Kami meminta maaf. Proyek ini telah mengindikasikan bahwa mereka memiliki semua sukarelawan yang butuhkan saat ini.";
 
     Covid.showModal(headerHTML, bodyHTML, [ { type: 'cancel', text: 'OK' } ], 'warning');
 
@@ -43,25 +43,25 @@ const Project = {
     if (orgStatus == "For-profit") {
       forProfitAlert = `
       <div class="mt-3 text-xs">
-        The U.S. Department of Labor has indicated that volunteers should not provide services equivalent to that of an employee for <span class='text-orange-400'>for-profit</span> private sector employers.<br/><br/>
-        Discuss with the project team before proceeding in volunteering.
+        Siapbantu menyatakan bahwa relawan seharusnya tidak boleh memberikan layanan/perjuangan yang sama dengan karyawan yang <span class='text-orange-400'>ada di sektor for-profit</span>.<br/><br/>
+        Diskusikan dengan tim karya tersebut sebelum melanjutkan secara sukarela.
       </div>
       `
     }
 
-    const headerHTML = "You're about to volunteer";
+    const headerHTML = "Anda akan menjadi sukarelawan";
     const bodyHTML = `
-      <span class="text-indigo-600">${projectName}</span> is looking for
+      <span class="text-indigo-600">${projectName}</span> sedang mencari
       <br>
       ${Covid.skillBadges(skillsRequired, 'indigo')}
       <br>
-      Are you sure? The project owner will be alerted.<br><br>
-      Optionally, you can also send them a note on how you may contribute on one of these roles
+      Apakah kamu yakin? Pemilik karya akan diberi tahu.<br><br>
+      Tidak wajib, Kamu juga dapat mengirimi mereka pesan bagaimana kamu dapat berkontribusi pada salah satu peran ini
       <br>
       <div class="mt-3">
-        <label for="volunteer_note" class="sr-only">Volunteer note</label>
+        <label for="volunteer_note" class="sr-only">Catatan sukarelawan</label>
         <div class="relative rounded-md shadow-sm">
-          <input id="volunteer_note" class="form-input block w-full sm:text-sm sm:leading-5" placeholder="In one sentence, why are you interested?" />
+          <input id="volunteer_note" class="form-input block w-full sm:text-sm sm:leading-5" placeholder="Dalam satu kalimat, mengapa Anda tertarik?" />
         </div>
       </div>
 
@@ -85,8 +85,8 @@ const Project = {
     const targetHref = $(that).attr('href');
     const skillsRequired = $(that).attr('x-skills-required');
 
-    const headerHTML = "You're missing skills";
-    const bodyHTML = `It looks like the skills needed for this project do not match your skillset. \n\nIf you think this is incorrect, please update your profile with one of the following skills: <b>${skillsRequired}</b>.`;
+    const headerHTML = "Skill tidak sesuai";
+    const bodyHTML = `Sepertinya skill yang dibutuhkan untuk karya ini tidak sesuai dengan skill kamu. \n\nJika menurut kami ini salah, perbarui profil kamu dengan salah satu skill berikut: <b>${skillsRequired}</b>.`;
 
     const callback = () => window.location.href = targetHref;
     Covid.showModal(headerHTML, bodyHTML, [ { type: 'cancel' }, { type: 'submit', text: 'Edit Profile', callback } ], 'warning');

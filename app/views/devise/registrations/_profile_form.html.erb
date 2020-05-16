@@ -1,19 +1,19 @@
 <div class="mt-6 sm:mt-5">
   <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
     <label for="name" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-      Name
+      Nama
     </label>
     <div class="mt-1 sm:mt-0 sm:col-span-2">
       <div class="max-w-lg flex rounded-md shadow-sm">
         <%= f.text_field "name", class: "flex-1 form-input block w-full rounded-none rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5", required: true %>
       </div>
-      <p class="mt-2 text-sm text-gray-500">Your full name.</p>
+      <p class="mt-2 text-sm text-gray-500">Nama lengkap Anda.</p>
     </div>
   </div>
 
   <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
     <label for="about" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-      About you
+      Tentang Anda
     </label>
     <div class="mt-1 sm:mt-0 sm:col-span-2">
       <div class="max-w-lg flex rounded-md shadow-sm">
@@ -28,7 +28,7 @@
         <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
           <div>
             <legend class="text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700">
-              Skills you can help with
+              Skill yang bisa Anda bantu
             </legend>
           </div>
           <div class="mt-4 sm:mt-0 sm:col-span-2">
@@ -57,7 +57,7 @@
           <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
             <div>
               <legend class="text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700">
-                Level of Availability
+                Tingkat Ketersediaan
               </legend>
             </div>
             <div class="mt-4 sm:mt-0 sm:col-span-2">
@@ -82,25 +82,25 @@
 
   <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
     <label for="profile_links" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-      Links to places where people can get to know you better
+      Tautan ke tempat di mana orang bisa mengenal Anda lebih baik
     </label>
     <div class="mt-1 sm:mt-0 sm:col-span-2">
       <div class="max-w-lg flex rounded-md shadow-sm">
         <%= f.text_area "profile_links", rows: 3, class: "form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5", required: true %>
       </div>
-      <p class="mt-2 text-sm text-gray-500">For instance your arXiv, GitHub, LinkedIn, Twitter, YouTube, or portfolio. One per line.</p>
+      <p class="mt-2 text-sm text-gray-500">Contohnya Instagram, GitHub, LinkedIn, Twitter, YouTube, atau portfolio. Urut per baris.</p>
     </div>
   </div>
 
   <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
     <label for="location" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-      Your ballpark location
+      Lokasi terkini Anda
     </label>
     <div class="mt-1 sm:mt-0 sm:col-span-2">
       <div class="max-w-lg flex rounded-md shadow-sm">
         <%= f.text_field "location", class: "flex-1 form-input block w-full rounded-none rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5", required: true %>
       </div>
-      <p class="mt-2 text-sm text-gray-500">City/State/Country ideally, don't be too specific.</p>
+      <p class="mt-2 text-sm text-gray-500">Kota/Provinsi/Negara contohnya, jangan terlalu spesifik.</p>
     </div>
   </div>
 
@@ -110,7 +110,7 @@
         <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
           <div>
             <legend class="text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700">
-              Options
+              Pilihan
             </legend>
           </div>
           <div class="mt-4 sm:mt-0 sm:col-span-2">
@@ -121,7 +121,7 @@
                 </div>
                 <div class="pl-7 text-sm leading-5">
                   <%= f.label 'visibility', 'Visibility', class: 'font-medium text-gray-700' %>
-                  <p class="text-gray-500">I want my information (including my email) to be visible in the public directory.</p>
+                  <p class="text-gray-500">Saya ingin informasi saya (termasuk email saya) terlihat secara umum.</p>
                 </div>
               </div>
               <br />
@@ -130,8 +130,8 @@
                   <%= f.check_box "pair_with_projects", class: "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out5" %>
                 </div>
                 <div class="pl-7 text-sm leading-5">
-                  <%= f.label 'pair_with_projects', 'Pair me with projects', class: 'font-medium text-gray-700' %>
-                  <p class="text-gray-500">I want to be paired with relevant projects based on my skills</p>
+                  <%= f.label 'pair_with_projects', 'Hubungkan saya dengan karya yang cocok', class: 'font-medium text-gray-700' %>
+                  <p class="text-gray-500">Saya ingin dipasangkan dengan karya yang relevan berdasarkan skill saya</p>
                 </div>
               </div>
             </div>
@@ -145,13 +145,13 @@
 <div class="mt-8 border-t border-gray-200 pt-8 sm:mt-5 sm:pt-10">
   <div>
     <h3 class="text-lg leading-6 font-medium text-gray-900">
-      Or change your email/password
+      Atau ubah email/kata sandi Anda
     </h3>
   </div>
 
   <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
     <label for="email" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-      Email address
+      Alamat email
     </label>
     <div class="mt-1 sm:mt-0 sm:col-span-2">
       <div class="max-w-lg flex rounded-md shadow-sm">
@@ -162,20 +162,20 @@
 
   <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
     <label for="new_password" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-      Password
+      Kata sandi
     </label>
     <div class="mt-1 sm:mt-0 sm:col-span-2">
       <div class="max-w-lg flex rounded-md shadow-sm">
         <%= f.password_field :password, autocomplete: "new-password", class: "flex-1 form-input block w-full rounded-none rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5" %>
       </div>
 
-      <p class="mt-2 text-sm text-gray-500">Leave blank if you don't want to change it.</p>
+      <p class="mt-2 text-sm text-gray-500">Biarkan kosong jika Anda tidak ingin mengubahnya.</p>
     </div>
   </div>
 
   <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
     <label for="password_confirmation" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-      Password confirmation
+      konfirmasi kata sandi
     </label>
     <div class="mt-1 sm:mt-0 sm:col-span-2">
       <div class="max-w-lg flex rounded-md shadow-sm">
@@ -186,14 +186,14 @@
 
   <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
     <label for="current_password" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-      Old password
+      Password lama
     </label>
     <div class="mt-1 sm:mt-0 sm:col-span-2">
       <div class="max-w-lg flex rounded-md shadow-sm">
         <%= f.password_field :current_password, autocomplete: "current-password", class: "flex-1 form-input block w-full rounded-none rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5" %>
       </div>
 
-      <p class="mt-2 text-sm text-gray-500">Only if you are changing your password.</p>
+      <p class="mt-2 text-sm text-gray-500">Hanya jika Anda ingin mengubah kata sandi.</p>
     </div>
   </div>
 </div>
