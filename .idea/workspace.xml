@@ -31,11 +31,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4f3999c-81f2-4973-bef2-baea36f10c8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.rakeTasks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/_featured-projects.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/_featured-projects.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/projects/_project-card.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/projects/_project-card.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/projects/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/projects/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200406185148_fix_project_status.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200406185148_fix_project_status.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/controllers/home_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/home_controller_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,8 +171,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589615588851</updated>
-      <workItem from="1589615593222" duration="5359000" />
+      <workItem from="1589615593222" duration="5708000" />
     </task>
+    <task id="LOCAL-00001" summary="Remove docker">
+      <created>1589626659054</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589626659054</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +199,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Remove docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove docker" />
   </component>
   <component name="WindowStateProjectService">
     <state x="421" y="170" width="519" height="388" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589618217200">
@@ -212,5 +223,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1324" height="174" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1589615630485" />
+    <state x="390" y="114" width="585" height="502" key="find.popup" timestamp="1589626923871">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="114" width="585" height="502" key="find.popup/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1589626923871" />
   </component>
 </project>
