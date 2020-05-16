@@ -135,7 +135,7 @@ class ProjectsController < ApplicationController
   def toggle_volunteer
     if @project.volunteered_users.include?(current_user)
       @project.volunteers.where(user: current_user).destroy_all
-      flash[:notice] = "Kami telah menghapus Anda dari daftar sukarelawan."
+      flash[:notice] = 'Kami telah menghapus Anda dari daftar sukarelawan.'
     else
       params[:volunteer_note] ||= ''
 
@@ -163,7 +163,7 @@ class ProjectsController < ApplicationController
 
     def ensure_owner_or_admin
       if !@project.can_edit?(current_user)
-        flash[:error] = "Maaf, Anda tidak memiliki akses ini."
+        flash[:error] = 'Maaf, Anda tidak memiliki akses ini.'
         redirect_to projects_path
       end
     end

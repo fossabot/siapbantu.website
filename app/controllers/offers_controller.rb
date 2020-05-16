@@ -68,7 +68,7 @@ class OffersController < ApplicationController
 
     def ensure_owner_or_admin
       if current_user != @offer.user && !current_user.is_admin?
-        flash[:error] = "Maaf, Anda tidak memiliki akses ini."
+        flash[:error] = 'Maaf, Anda tidak memiliki akses ini.'
         redirect_to offers_path
       end
     end
