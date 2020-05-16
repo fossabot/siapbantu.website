@@ -32,10 +32,23 @@
   <component name="ChangeListManager">
     <list default="true" id="b4f3999c-81f2-4973-bef2-baea36f10c8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/covid/covid.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/covid/covid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/covid/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/covid/project.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/covid/volunteer_groups.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/covid/volunteer_groups.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/volunteer_groups/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/volunteer_groups/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/email_changed.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/email_changed.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/password_change.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/password_change.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/_filters-bar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/_filters-bar.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/_profile_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/_profile_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +183,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589615588851</updated>
-      <workItem from="1589615593222" duration="11479000" />
+      <workItem from="1589615593222" duration="15544000" />
     </task>
     <task id="LOCAL-00001" summary="Remove docker">
       <created>1589626659054</created>
@@ -193,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589632409076</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update first translated #02">
+      <created>1589635529676</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589635529676</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +235,8 @@
     <MESSAGE value="Remove docker" />
     <MESSAGE value="Karya populer" />
     <MESSAGE value="Update first translated #1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update first translated #1" />
+    <MESSAGE value="Update first translated #02" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update first translated #02" />
   </component>
   <component name="WindowStateProjectService">
     <state x="421" y="170" width="519" height="388" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589635230786">
@@ -238,10 +259,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1324" height="174" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1589615630485" />
-    <state x="278" y="101" width="806" height="526" key="Vcs.Push.Dialog.v2" timestamp="1589632418427">
+    <state x="278" y="101" width="806" height="526" key="Vcs.Push.Dialog.v2" timestamp="1589635560680">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="278" y="101" width="806" height="526" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1589632418427" />
+    <state x="278" y="101" width="806" height="526" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1589635560680" />
     <state x="263" y="100" width="810" height="558" key="find.popup" timestamp="1589634962297">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
