@@ -21,9 +21,9 @@ class Admin::VolunteerGroupsController < ApplicationController
         @project.volunteered_users << user unless @project.volunteered_users.include?(user)
       end
 
-      flash[:notice] = 'Volunteers assigned and invitation sent.'
+      flash[:notice] = 'Relawan berhasil ditugaskan dan undangan telah dikirim.'
     else
-      flash[:error] = 'No volunteers assigned so not doing anything.'
+      flash[:error] = 'Tidak ada relawan yang ditugaskan jadi tidak ada yang dilakukan.'
     end
 
     redirect_to project_path(@project)
