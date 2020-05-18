@@ -14,7 +14,7 @@ class AdminController < ApplicationController
     @project.highlight = !@project.highlight
     @project.save
 
-    flash[:notice] = @project.highlight? ? 'Karya dipopulerkan' : 'Karya dihapus dari fitur populer'
+    flash[:notice] = @project.highlight? ? 'Karya dipromosikan' : 'Karya dihapus dari fitur promosi'
     redirect_to project_path(@project)
   end
 end
