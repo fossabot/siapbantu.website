@@ -4,16 +4,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 4.2', '>= 4.2.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
+gem 'jbuilder', '~> 2.10', '>= 2.10.0'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -24,11 +24,11 @@ gem 'redis', '~> 4.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'kaminari'
-gem 'acts-as-taggable-on'
+gem 'kaminari', '>= 1.2.0'
+gem 'acts-as-taggable-on', '>= 6.5.0'
 
 # Display SVG's
-gem 'inline_svg'
+gem 'inline_svg', '>= 1.7.1'
 
 # Linting
 gem 'rubocop', require: false
@@ -41,14 +41,14 @@ gem 'brakeman'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails', '~> 4.0.0.rc1'
-  gem 'factory_bot_rails'
-  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 4.0.0.0'
+  gem 'factory_bot_rails', '>= 5.1.1'
+  gem 'rails-controller-testing', '>= 1.0.4'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 4.0.1'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -70,14 +70,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pg'
 
 # Authentication.
-gem 'devise'
+gem 'devise', '>= 4.7.1'
 
 # Auto link.
 gem 'rinku'
 
 # Sending emails.
 gem 'aws-sdk-ses'
-gem 'aws-sdk-rails'
+gem 'aws-sdk-rails', '>= 3.0.5'
 
 # File storage S3
 gem 'aws-sdk-s3', require: false
@@ -89,7 +89,7 @@ gem 'image_processing'
 gem 'exception_notification', git: 'https://github.com/smartinez87/exception_notification'
 
 # Search
-gem 'pg_search'
+gem 'pg_search', '>= 2.3.2'
 
 # Email obfuscation
 gem 'actionview-encoded_mail_to', git: 'https://github.com/mirko314/actionview-encoded_mail_to', branch: 'feature/fix-vanilla-mail-to'
@@ -98,7 +98,7 @@ gem 'actionview-encoded_mail_to', git: 'https://github.com/mirko314/actionview-e
 gem 'gravatar_image_tag'
 
 # .env
-gem 'dotenv-rails', groups: [ :development, :test ]
+gem 'dotenv-rails', '>= 2.7.5', groups: [ :development, :test ]
 
 # Configuration
 gem 'config'
