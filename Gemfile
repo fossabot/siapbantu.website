@@ -24,7 +24,7 @@ gem 'redis', '~> 4.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'kaminari', '>= 1.2.0'
+gem 'kaminari', '>= 1.2.1'
 gem 'acts-as-taggable-on', '>= 6.5.0'
 
 # Display SVG's
