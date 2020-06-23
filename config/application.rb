@@ -26,7 +26,6 @@ Raven.configure do |config|
   config.dsn = ENV['SENTRY_DSN']
   config.async = false
   config.context_lines = 3
-  config.current_environment = current_environment_from_env
   config.encoding = 'gzip'
   config.environments = []
   config.exclude_loggers = []
