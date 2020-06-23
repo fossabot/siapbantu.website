@@ -105,6 +105,3 @@ gem 'config'
 
 # Country codes
 gem 'iso_country_codes', '~> 0.7.8'
-
-# Sentry
-gem 'sentry-raven'

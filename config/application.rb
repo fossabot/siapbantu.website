@@ -21,13 +21,6 @@ if Rails.env.development? || Rails.env.test?
   Dotenv::Railtie.load
 end
 
-# Sentry DSN
-Raven.configure do |config|
-  config.dsn = ENV['SENTRY_DSN']
-  config.environments = %[production]
-  config.async = lambda { |event| SentryJob.perform_later(event) }
-end
-
 module CovidVolunteers
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
