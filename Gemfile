@@ -108,3 +108,8 @@ gem 'iso_country_codes', '~> 0.7.8'
 
 # Raygun
 gem 'raygun4ruby', '>= 3.2.1'
+
+# Raygun APM
+group :production do
+  gem 'raygun-apm'
+end
