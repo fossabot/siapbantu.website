@@ -1,65 +1,69 @@
 <%= link_to projects_path, class: "#{all_projects_nav_link_class(variant)}" do %>
-  Cari Karya
+  Find Projects
 <% end %>
 
 <%= link_to volunteers_path, class: "#{volunteers_nav_link_class(variant)}" do %>
-  Relawan
+  Volunteers
 <% end %>
 
-<%= link_to media_path, class: "#{offers_nav_link_class(variant)}" do %>
-  Media
+<%= link_to offers_path, class: "#{offers_nav_link_class(variant)}" do %>
+  Resources
+<% end %>
+
+<%= link_to office_hours_path, class: "#{office_hours_nav_link_class(variant)}" do %>
+  Office Hours
 <% end %>
 
 <%= link_to success_stories_path, class: "#{success_stories_nav_link_class(variant)}" do %>
-  Cerita Sukses
+  Success Stories
 <% end %>
 
-<%= link_to "https://discord.gg/knEfZDP", target: "_blank", class: "#{discord_nav_link_class(variant)}" do %>
+<%= link_to "https://discord.gg/8nAJfFN", target: "_blank", class: "#{discord_nav_link_class(variant)}" do %>
   Discord
 <% end %>
 
 <% if current_user %>
   <div class="relative group flex">
     <%= link_to 'javascript:void(0);', class: "#{nav_link_inactive_class(variant)} hidden md:flex" do %>
-      Akun <%= inline_svg_pack_tag 'media/svgs/chevron-right.svg', class: 'fill-current text-gray-600 transform rotate-90' %>
+      Account <%= inline_svg_pack_tag 'media/svgs/chevron-right.svg', class: 'fill-current text-gray-600 transform rotate-90' %>
     <% end %>
 
     <div class="md:hidden md:group-hover:flex w-full md:flex-col md:absolute md:z-30 md:nset-auto md:left-0 md:bg-white md:shadow-lg md:p-4 md:w-48 md:text-sm md:space-y-2 md:mt-14">
       <div>
         <%= link_to volunteered_projects_path, class: "#{volunteered_projects_nav_link_class(variant)}" do %>
-          Karya Diikuti
+          Volunteered Projects
         <% end %>
       </div>
       <div>
         <%= link_to own_projects_path, class: "#{own_projects_nav_link_class(variant)}" do %>
-          Karya Kamu
+          Your Projects
         <% end %>
       </div>
       <div>
         <%= link_to edit_user_registration_path, class: "#{profile_nav_link_class(variant)}" do %>
-          Profil Kamu
+          Your Profile
         <% end %>
       </div>
       <div>
         <%= link_to destroy_user_session_path, method: :delete, class: "#{logout_nav_link_class(variant)}" do %>
-          Keluar
+          Log out
         <% end %>
       </div>
     </div>
   </div>
 <% else %>
   <%= link_to new_user_registration_path, class: "#{sign_up_nav_link_class(variant)}" do %>
-    Daftar
+    Sign up
   <% end %>
   <%= link_to new_user_session_path, class: "#{login_nav_link_class(variant)}" do %>
-    Masuk
+    Log in
   <% end %>
 <% end %>
 
 <div class="self-center ml-4 mt-1">
   <%= link_to new_project_path do %>
     <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700 active:bg-indigo-700 flex-shrink-0 flex-grow-0">
-      Posting Karya
+      Create project
     </button>
   <% end %>
 </div>

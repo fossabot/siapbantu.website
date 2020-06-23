@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_14_015753) do
+ActiveRecord::Schema.define(version: 2020_05_27_191511) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2020_05_14_015753) do
     t.datetime "end_at", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "application_user_ids", default: [], null: false, array: true
   end
 
   create_table "projects", force: :cascade do |t|
@@ -95,6 +96,7 @@ ActiveRecord::Schema.define(version: 2020_05_14_015753) do
     t.text "project_ids"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "highlight", default: false, null: false
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|
@@ -145,6 +147,7 @@ ActiveRecord::Schema.define(version: 2020_05_14_015753) do
     t.string "level_of_availability"
     t.boolean "pair_with_projects", default: false
     t.boolean "deactivated", default: false, null: false
+    t.text "office_hour_description"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

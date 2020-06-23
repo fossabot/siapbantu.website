@@ -118,27 +118,27 @@ const VolunteerGroups = {
       }
     });
 
-    const subject = `[Siapbantu] Greetings - Project/Volunteers Introduction`;
+    const subject = `[Help With Covid] Greetings - Project/Volunteers Introduction`;
 
     let volunteersBody = [];
     for (const volunteer of volunteers) {
       volunteersBody.push(`${volunteer.name} / ${volunteer.email}`);
     }
 
-    let body = `Hai yang disana!
+    let body = `Hi there!
 
-Semoga Anda semua baik-baik saja! Terima kasih atas semua yang Anda lakukan untuk memberikan solusi bagi masyarakat dan menjadi bagian dari siapbantu.com.
+Hope you are all doing well! Thank you for all that you are doing to work on a solution for our world and being part of helpwithcovid.com.
 
-Karya ini membutuhkan bantuan Anda: ${projectName} (https://siapbantu.com/projects/${projectId}) oleh pemilik karya - ${projectOwnerEmail}. Saya pikir Anda mungkin bisa membantu. Saya telah menyertakan pemilik karya ke email ini jika Anda memiliki pertanyaan.
+This project needs your help: ${projectName} (http://helpwithcovid.com/projects/${projectId}) by project owner - ${projectOwnerEmail}. I thought you might be able to help. I have included the project owner to this email should you have any questions.
 
-Jika Anda sudah berkontribusi ke karya yang ada, silakan masuk ke siapbantu.com dan hapus pengaturan "hubungkan saya dengan karya yang cocok" dari halaman profil Anda (https://siapbantu.com/users/edit).
+If you are already on an existing project, please login to helpwithcovid.com and remove the setting "pair me with a project" from your profile page (https://helpwithcovid.com/users/edit).
 
-Jika Anda merasa bahwa Anda tidak cocok setelah berbicara dengan pemilik karya, silakan buka tautan karya (https://siapbantu.com/projects/${projectId}) dan “batalkan tawaran sukarelawan”. Kami akan berupaya mencocokkan Anda dengan proyek lain.
+If you feel that you are not the right fit after speaking with the project owner, please go to the project link (http://helpwithcovid.com/projects/${projectId}) and “cancel volunteer offer”. We will work on matching you to another project.
 
-Tolong beri tahu saya jika Anda memiliki pertanyaan atau masalah.
+Please let me know if you have any questions or concerns.
 
-Terima kasih!
-Siapbantu Core team`;
+Thank you!
+HWC Core team`;
 
     const mailHref=`mailto:${projectOwnerEmail}?reply-to=${projectOwnerEmail}&bcc=${volunteerEmails.join(',').replace(/\+/g, '%2B')}&subject=${subject}&body=${body.replace(/\n/g, '%0D%0A').replace(/\+/g, '%2B')}`;
     window.open(mailHref, '_blank');

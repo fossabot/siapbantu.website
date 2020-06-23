@@ -1,8 +1,8 @@
 <!-- Hero -->
 <div class="bg-white -mt-10 pt-24 ">
   <div class="container mb-4 text-center mb-24">
-    <h1 class="text-2xl sm:text-4xl font-bold tracking-tight leading-tight">Kontribusi ke Karya Digital dan Non-Digital</h1>
-    <h2 class="sm:text-2xl tracking-tight leading-tight mt-2">Kami membantu masyarakat untuk saling membantu melalui karya.</h2>
+    <h1 class="text-2xl sm:text-4xl font-bold tracking-tight leading-tight">Volunteer for COVID-19 projects</h1>
+    <h2 class="sm:text-2xl tracking-tight leading-tight mt-2">We help people find the resources they need.</h2>
 
     <div class="relative w-64 mx-auto">
       <%= form_with url: projects_path, local: true, method: :get, html: {'x-ref': 'searchForm'} do |form| %>
@@ -12,10 +12,10 @@
         </button>
       <% end %>
     </div>
-    <div class="text-indigo-700 mt-4">Kekuatan kami ada di <%= number_with_delimiter @project_count %>+ karya dan <%= number_with_delimiter @volunteer_count %>+ relawan.</div>
+    <div class="text-indigo-700 mt-4">We are <%= number_with_delimiter @project_count %>+ projects and <%= number_with_delimiter @volunteer_count %>+ volunteers strong.</div>
   </div>
 
-  <!-- Karya Populer -->
+  <!-- Featured projects -->
   <div class="relative container z-10 pb-4">
     <%= render partial: 'partials/featured-projects', locals: {projects: @featured_projects, category: nil} %>
   </div>

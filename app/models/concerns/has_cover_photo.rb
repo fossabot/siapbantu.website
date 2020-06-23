@@ -4,9 +4,9 @@ module HasCoverPhoto
   included do
     has_one_attached :image
 
-    after_save do
-      Rails.cache.delete cdn_image_cache_key
-    end
+      after_save do
+        Rails.cache.delete cdn_image_cache_key
+      end
   end
 
   # Because Active Storage doesn't support serving files through cloudfront (or any other way)

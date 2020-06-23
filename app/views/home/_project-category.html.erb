@@ -8,7 +8,7 @@
           <%= category[:body] %>
         </div>
         <%= link_to category[:slug], class: 'float-right text-indigo-700 font-bold group' do %>
-          Lihat <%= category[:projects_count] %> karya lainnya <%= inline_svg_pack_tag 'media/svgs/chevron-right.svg', class: 'inline-block fill-current transform transition-transform duration-100 -translate-x-1 group-hover:translate-x-0' %>
+          See all <%= category[:projects_count] %> <%= 'project'.pluralize category[:projects_count] %> <%= inline_svg_pack_tag 'media/svgs/chevron-right.svg', class: 'inline-block fill-current transform transition-transform duration-100 -translate-x-1 group-hover:translate-x-0' %>
         <% end %>
       </div>
     </div>

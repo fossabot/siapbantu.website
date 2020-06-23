@@ -8,8 +8,8 @@ class SuccessStoriesController < ApplicationController
   def index
     params[:page] ||= 1
 
-    @page_title = 'Cerita Sukses'
-    @success_stories = SuccessStory.page(params[:page]).per(24).order(created_at: :desc)
+    @page_title = 'Success Stories'
+    @success_stories = SuccessStory.page(params[:page]).per(24).order(highlight: :desc, created_at: :desc)
 
     @index_from = (@success_stories.prev_page || 0) * @success_stories.limit_value + 1
     @index_to = [@index_from + @success_stories.limit_value - 1, @success_stories.total_count].min
@@ -31,7 +31,7 @@ class SuccessStoriesController < ApplicationController
 
     respond_to do |format|
       if @success_story.save
-        format.html { redirect_to @success_story, notice: 'Cerita berhasil dibuat.' }
+        format.html { redirect_to @success_story, notice: 'Story was successfully created.' }
         format.json { render :show, status: :created, location: @success_story }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class SuccessStoriesController < ApplicationController
   def update
     respond_to do |format|
       if @success_story.update(success_story_params)
-        format.html { redirect_to @success_story, notice: 'Cerita berhasil diperbarui.' }
+        format.html { redirect_to @success_story, notice: 'Story was successfully updated.' }
         format.json { render :show, status: :ok, location: @success_story }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class SuccessStoriesController < ApplicationController
     @success_story.destroy
 
     respond_to do |format|
-      format.html { redirect_to success_stories_url, notice: 'Cerita berhasil dihapus.' }
+      format.html { redirect_to success_stories_url, notice: 'Story was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -67,6 +67,6 @@ class SuccessStoriesController < ApplicationController
     end
 
     def success_story_params
-      params.fetch(:success_story, {}).permit(:title, :body, :links, :image, :project_ids)
+      params.fetch(:success_story, {}).permit(:title, :body, :links, :image, :project_ids, :highlight)
     end
 end

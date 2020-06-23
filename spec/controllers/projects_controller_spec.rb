@@ -86,7 +86,7 @@ RSpec.describe ProjectsController, type: :controller do
         get :show, params: { id: project.to_param }
         expect(response).to be_successful
         expect(response.body).to_not include('Number of volunteers')
-        expect(response.body).to_not include('Sign up to volunteer')
+        expect(response.body).to_not include('Sign up to volunteer')  
       end
 
       it 'show volunteer info' do

@@ -71,6 +71,10 @@ module ApplicationHelper
     params[:controller] == 'offers' && [ 'index' ].include?(params[:action]) ? nav_link_active_class(variant) : nav_link_inactive_class(variant)
   end
 
+  def office_hours_nav_link_class(variant = 'DESKTOP')
+    params[:controller] == 'office_hours' && [ 'index' ].include?(params[:action]) ? nav_link_active_class(variant) : nav_link_inactive_class(variant)
+  end
+
   def success_stories_nav_link_class(variant = 'DESKTOP')
     params[:controller] == 'success_stories' && [ 'index' ].include?(params[:action]) ? nav_link_active_class(variant) : nav_link_inactive_class(variant)
   end
@@ -106,7 +110,7 @@ module ApplicationHelper
 
     applied = get_query_params[filter_by].include?(label)
 
-    if (filter_by == 'project_types') && @applied_project_types.present? && @applied_project_types.include?(label)
+    if filter_by == 'project_types' and @applied_project_types.present? and @applied_project_types.include?(label)
       applied = true
     end
 
@@ -125,7 +129,7 @@ module ApplicationHelper
       classes += ' bg-indigo-300' if applied
     end
 
-    render partial: 'partials/filter-badge', locals: { label: label, url: url, classes: classes, title: title, color: color }
+    render partial: 'partials/filter-badge', locals: {label: label, url: url, classes: classes, title: title, color: color}
   end
 
   def clear_filter_badge(label: nil, model: nil, filter_by: nil, color: nil, title: nil)
@@ -136,7 +140,7 @@ module ApplicationHelper
     classes = 'bg-gray-100 text-gray-800'
     classes += ' bg-gray-200' if get_query_params[filter_by].length == 0
 
-    render partial: 'partials/filter-badge', locals: { label: label, url: url, classes: classes, title: title, color: 'gray' }
+    render partial: 'partials/filter-badge', locals: {label: label, url: url, classes: classes, title: title, color: 'gray'}
   end
 
   def get_query_params
@@ -201,13 +205,13 @@ module ApplicationHelper
   end
 
   def format_country(country)
-    return country if country == '' || country == 'Global'
+    return country if (country == '' || country == 'Global')
 
     begin
-      IsoCountryCodes.find(country).name
+      return IsoCountryCodes.find(country).name
     rescue
       # Fallback to raw value
-      country
+      return country
     end
   end
 
@@ -217,15 +221,15 @@ module ApplicationHelper
 
   def get_present_country_fields
     present_countries = Project.group(:target_country).select(:target_country).map(&:target_country).reject { |c| c.blank? }
-    [['Global', 'Global'], ['Indonesia', 'ID']].concat(IsoCountryCodes.for_select).uniq.filter { |c| present_countries.include? c[1] }
+    [['Global', 'Global'], ['United States of America', 'US']].concat(IsoCountryCodes.for_select).uniq.filter { |c| present_countries.include? c[1] }
   end
 
   def filter_bar_filter(label, filter, options)
-    render partial: 'projects/filter-bar-filter', locals: { options: options, label: label, filter: filter.to_s }
+    render partial: 'projects/filter-bar-filter', locals: {options: options, label: label, filter: filter.to_s}
   end
 
   def google_analytics_id
-    Rails.env.production? ? 'UA-164812794-1' : 'UA-164812794-1'
+    Rails.env.production? ? 'UA-162054776-1' : 'UA-162054776-2'
   end
 
   def track_ga_event_if_needed
@@ -238,4 +242,14 @@ module ApplicationHelper
   def list_cards(&block)
     "<div class='w-full px-4 sm:px-0 space-y-bottom-4 sm:grid grid-cols-2 lg:grid-cols-3 sm:gap-6 grid-auto-row-1fr'>#{capture(&block)}</div>".html_safe
   end
+
+  def url_from_string(string)
+    URI.parse(string[URI.regexp(%w(http https mailto))]) rescue nil
+  end
+
+  def shorten_url(url)
+    return nil if url.nil?
+    url.scheme == 'mailto' ? url.opaque : url.host
+  end
+
 end

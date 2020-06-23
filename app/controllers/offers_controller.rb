@@ -26,7 +26,7 @@ class OffersController < ApplicationController
 
     respond_to do |format|
       if @offer.save
-        format.html { redirect_to @offer, notice: 'Penawaran berhasil dibuat.' }
+        format.html { redirect_to @offer, notice: 'Offer was successfully created.' }
         format.json { render :show, status: :created, location: @offer }
       else
         format.html { render :new }
@@ -38,7 +38,7 @@ class OffersController < ApplicationController
   def update
     respond_to do |format|
       if @offer.update(offer_params)
-        format.html { redirect_to @offer, notice: 'Penawaran berhasil diperbarui.' }
+        format.html { redirect_to @offer, notice: 'Offer was successfully updated.' }
         format.json { render :show, status: :ok, location: @offer }
       else
         format.html { render :edit }
@@ -50,7 +50,7 @@ class OffersController < ApplicationController
   def destroy
     @offer.destroy
     respond_to do |format|
-      format.html { redirect_to offers_url, notice: 'Penawaran berhasil dihapus.' }
+      format.html { redirect_to offers_url, notice: 'Offer was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -68,7 +68,7 @@ class OffersController < ApplicationController
 
     def ensure_owner_or_admin
       if current_user != @offer.user && !current_user.is_admin?
-        flash[:error] = 'Maaf, Anda tidak memiliki akses ini.'
+        flash[:error] = "Apologies, you don't have access to this."
         redirect_to offers_path
       end
     end

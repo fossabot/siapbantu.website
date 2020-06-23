@@ -71,7 +71,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :aws_ses
 
-  config.action_mailer.default_url_options = { host: 'siapbantu.com', protocol: 'http' }
+  config.action_mailer.default_url_options = { host: 'helpwithcovid.com', protocol: 'http' }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -119,8 +119,8 @@ Rails.application.configure do
 
   Rails.application.config.middleware.use ExceptionNotification::Rack,
   email: {
-    email_prefix: '[Siapbantu] ',
-    sender_address: %{"Siapbantu" <no-reply@siapbantu.com>},
+    email_prefix: '[HelpWithCovid] ',
+    sender_address: %{"Help With Covid" <no-reply@helpwithcovid.com>},
     exception_recipients: ENV['EXCEPTION_NOTIFIERS']&.split(',')
   }
 end

@@ -16,10 +16,10 @@ class ProjectsController < ApplicationController
     @show_global_announcements = false
     @applied_filters = params.dup
 
-    if (request.path != projects_path) && params[:category_slug].present?
+    if request.path != projects_path and params[:category_slug].present?
       @project_category = Settings.project_categories.find { |category| category.slug == params[:category_slug] }
 
-      raise ActionController::RoutingError, 'Tidak ditemukan' if @project_category.blank?
+      raise ActionController::RoutingError, 'Not Found' if @project_category.blank?
 
       if @project_category.present?
         @applied_filters[:project_types] = @project_category[:project_types]
@@ -31,9 +31,9 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       format.html do
-        @projects_header = 'Karya orang baik sedang mencari relawan'
-        @projects_subheader = 'Karya baru atau sedang berjalan yang bermanfaat bagi masyarakat sedang membutuhkan bantuan. Ayo ikutan membantu atau buat karyamu sendiri.'
-        @page_title = 'Semua Karya'
+        @projects_header = 'COVID-19 projects looking for volunteers'
+        @projects_subheader = 'New or established projects helping with the COVID-19 crisis that need help. Volunteer yourself or create a new one.'
+        @page_title = 'All Projects'
 
         @projects = @projects.page(params[:page]).per(24)
 
@@ -54,9 +54,9 @@ class ProjectsController < ApplicationController
     @index_from = (@projects.prev_page || 0) * @projects.current_per_page + 1
     @index_to = [@index_from + @projects.current_per_page - 1, @projects.total_count].min
 
-    @projects_header = 'Karya Yang Diikuti'
-    @projects_subheader = 'Ini adalah karya-karya yang kamu ikut serta didalamnya.'
-    @page_title = 'Karya Yang Diikuti'
+    @projects_header = 'Volunteered Projects'
+    @projects_subheader = 'These are the projects where you volunteered.'
+    @page_title = 'Volunteered Projects'
     render action: 'index'
   end
 
@@ -68,9 +68,9 @@ class ProjectsController < ApplicationController
     @index_from = (@projects.prev_page || 0) * @projects.current_per_page + 1
     @index_to = [@index_from + @projects.current_per_page - 1, @projects.total_count].min
 
-    @projects_header = 'Karya Kamu'
-    @projects_subheader = 'Ini adalah karya-karya yang kamu buat.'
-    @page_title = 'Karya Kamu'
+    @projects_header = 'Own Projects'
+    @projects_subheader = 'These are the projects you created.'
+    @page_title = 'Own Projects'
     render action: 'index'
   end
 
@@ -89,7 +89,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
-    track_event 'Mulai membuat karya'
+    track_event 'Project creation started'
   end
 
   def create
@@ -97,8 +97,8 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
-        track_event 'Membuat karya telah selesai'
-        format.html { redirect_to @project, notice: 'Karya berhasil dibuat.' }
+        track_event 'Project creation complete'
+        format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
         format.html { render :new }
@@ -115,7 +115,7 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if updated
-        format.html { redirect_to @project, notice: 'Karya berhasil diperbarui.' }
+        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
         format.json { render :show, status: :ok, location: @project }
       else
         format.html { render :edit }
@@ -127,7 +127,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url, notice: 'Karya berhasil dihapus.' }
+      format.html { redirect_to projects_url, notice: 'Project was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -135,7 +135,7 @@ class ProjectsController < ApplicationController
   def toggle_volunteer
     if @project.volunteered_users.include?(current_user)
       @project.volunteers.where(user: current_user).destroy_all
-      flash[:notice] = 'Kami telah menghapus Anda dari daftar sukarelawan.'
+      flash[:notice] = "We've removed you from the list of volunteered people."
     else
       params[:volunteer_note] ||= ''
 
@@ -143,8 +143,8 @@ class ProjectsController < ApplicationController
 
       ProjectMailer.with(project: @project, user: current_user, note: params[:volunteer_note]).new_volunteer.deliver_now
 
-      flash[:notice] = 'Terima kasih telah menjadi sukarelawan! Pemilik karya akan diberi tahu.'
-      track_event 'Pengguna mengajukan diri'
+      flash[:notice] = 'Thanks for volunteering! The project owners will be alerted.'
+      track_event 'User volunteered'
     end
 
     redirect_to project_path(@project)
@@ -163,7 +163,7 @@ class ProjectsController < ApplicationController
 
     def ensure_owner_or_admin
       if !@project.can_edit?(current_user)
-        flash[:error] = 'Maaf, Anda tidak memiliki akses ini.'
+        flash[:error] = "Apologies, you don't have access to this."
         redirect_to projects_path
       end
     end
@@ -205,11 +205,11 @@ class ProjectsController < ApplicationController
     def ensure_no_legacy_filtering
       new_params = {}
 
-      if params[:skills].present? && params[:skills].include?(',')
+      if params[:skills].present? and params[:skills].include? ','
         new_params[:skills] = params[:skills].split(',')
       end
 
-      if params[:project_types].present? && params[:project_types].include?(',')
+      if params[:project_types].present? and params[:project_types].include? ','
         new_params[:project_types] = params[:project_types].split(',')
       end
 

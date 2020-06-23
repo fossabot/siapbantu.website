@@ -5,14 +5,14 @@ RSpec.describe OffersController, type: :controller do
 
   shared_examples 'it does not show global announcements' do
     it 'does not show global announcements' do
-      expect(response).to_not render_template(partial: '_global-announcements')
+      expect(response).to_not render_template(:partial => '_global-announcements')
     end
   end
 
   shared_examples 'an unsuccessful request' do
     it 'is unsuccessful' do
       expect(response).not_to be_successful
-    end
+    end 
   end
 
   shared_examples 'a successful request' do |text|
@@ -24,13 +24,13 @@ RSpec.describe OffersController, type: :controller do
       expect(response.body).to include(text)
     end
   end
-
+  
   describe 'GET #index' do
     let!(:offer) { create(:offer, name: 'Free books', user: user) }
     let(:user) { create(:user) }
-
+    
     before { get :index }
-
+    
     it_behaves_like 'a successful request', 'Free books'
 
     it 'assigns offers' do
@@ -47,26 +47,26 @@ RSpec.describe OffersController, type: :controller do
     before { get :show, params: { id: offer_id } }
 
     context 'with a numeric id as param' do
-      let(:offer_id) { offer.id }
-
+      let(:offer_id) { offer.id } 
+      
       it_behaves_like 'a successful request', 'Free coffee'
 
       it 'assigns the offer' do
         expect(assigns(:offer)).to eq(offer)
       end
-
+      
       it_behaves_like 'it does not show global announcements'
     end
 
-    context 'with a parameterized id' do
+    context 'with a parameterized id' do 
       let(:offer_id) { offer.to_param }
-
+      
       it_behaves_like 'a successful request', 'Free coffee'
 
       it 'assigns the offer' do
         expect(assigns(:offer)).to eq(offer)
       end
-
+      
       it_behaves_like 'it does not show global announcements'
     end
   end
@@ -81,7 +81,7 @@ RSpec.describe OffersController, type: :controller do
     end
 
     context 'when user is signed-in' do
-      before do
+      before do 
         sign_in user
 
         get :new
@@ -154,8 +154,8 @@ RSpec.describe OffersController, type: :controller do
 
       context 'when offer cannot be saved' do
         let(:offer) { build(:offer) }
-
-        before do
+        
+        before do 
           allow(Offer).to receive(:new).and_return(offer)
           allow(offer).to receive(:save).and_return(false)
 
@@ -188,7 +188,7 @@ RSpec.describe OffersController, type: :controller do
     context 'when user is not signed in' do
       before { put :update, params: params }
 
-      it_behaves_like 'an unsuccessful request'
+      it_behaves_like 'an unsuccessful request'    
     end
 
     context 'when user is signed in' do
@@ -230,7 +230,7 @@ RSpec.describe OffersController, type: :controller do
       it 'it is successful' do
         expect(response).to redirect_to(offer_path(offer))
       end
-    end
+    end    
   end
 
   describe 'DELETE #destroy' do
@@ -240,7 +240,7 @@ RSpec.describe OffersController, type: :controller do
     context 'when user is not signed in' do
       before { post :destroy, params: { id: offer.id } }
 
-      it_behaves_like 'an unsuccessful request'
+      it_behaves_like 'an unsuccessful request'     
     end
 
     context 'when user is signed-in' do

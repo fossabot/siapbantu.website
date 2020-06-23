@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'Siapbantu <no-reply@siapbantu.com>'
+  default from: 'Help With Covid <no-reply@helpwithcovid.com>'
   layout 'mailer'
 end

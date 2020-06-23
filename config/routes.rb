@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  get '/tentang-kami', to: 'home#about', as: 'about'
+  get '/about', to: 'home#about', as: 'about'
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
   devise_scope :user do
@@ -33,9 +33,15 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/media', to: 'offers#index', as: 'media'
-
   resources :offers
+
+  get '/office_hours/u/:id' => 'office_hours#index', as: 'office_hours_for_volunteer'
+  resources :office_hours do
+    member do
+      post :apply
+      post :accept
+    end
+  end
 
   resources :success_stories
 

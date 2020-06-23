@@ -7,7 +7,7 @@ class ImagesController < ApplicationController
     @resource.save
 
     respond_to do |format|
-      format.html { redirect_back fallback_location: root_path, notice: 'Gambar dihapus.' }
+      format.html { redirect_back fallback_location: root_path, notice: 'Image removed.' }
       format.json { render :show, location: @resource }
     end
   end
