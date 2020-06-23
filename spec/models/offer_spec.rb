@@ -13,11 +13,11 @@ RSpec.describe Offer, type: :model do
   end
 
   describe '#to_param' do
-  	let(:user) { build(:user) }
-  	let(:offer) { build(:offer, user: user) }
+  	 let(:user) { build(:user) }
+  	 let(:offer) { build(:offer, user: user) }
 
-		it 'should parameterize id' do
-			expect(offer.to_param).to eq("#{offer.id}-#{offer.name.parameterize}")
-		end
+		  it 'should parameterize id' do
+  			 expect(offer.to_param).to eq("#{offer.id}-#{offer.name.parameterize}")
+  		end
   end
 end

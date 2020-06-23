@@ -11,5 +11,4 @@ class UserMailerPreview < ActionMailer::Preview
 
     UserMailer.with(office_hour: office_hour, application: office_hour.applications[0]).office_hour_application
   end
-
 end

@@ -34,7 +34,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "bundle exec rubocop -a"
+      "pre-commit": "bundle exec rubocop -a && git add ."
     }
   },
   "snyk": true,
