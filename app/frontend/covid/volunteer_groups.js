@@ -127,13 +127,13 @@ const VolunteerGroups = {
 
     let body = `Hi there!
 
-Hope you are all doing well! Thank you for all that you are doing to work on a solution for our world and being part of helpwithcovid.com.
+Hope you are all doing well! Thank you for all that you are doing to work on a solution for our world and being part of siapbantu.com.
 
-This project needs your help: ${projectName} (http://helpwithcovid.com/projects/${projectId}) by project owner - ${projectOwnerEmail}. I thought you might be able to help. I have included the project owner to this email should you have any questions.
+This project needs your help: ${projectName} (http://siapbantu.com/projects/${projectId}) by project owner - ${projectOwnerEmail}. I thought you might be able to help. I have included the project owner to this email should you have any questions.
 
-If you are already on an existing project, please login to helpwithcovid.com and remove the setting "pair me with a project" from your profile page (https://helpwithcovid.com/users/edit).
+If you are already on an existing project, please login to siapbantu.com and remove the setting "pair me with a project" from your profile page (https://siapbantu.com/users/edit).
 
-If you feel that you are not the right fit after speaking with the project owner, please go to the project link (http://helpwithcovid.com/projects/${projectId}) and “cancel volunteer offer”. We will work on matching you to another project.
+If you feel that you are not the right fit after speaking with the project owner, please go to the project link (http://siapbantu.com/projects/${projectId}) and “cancel volunteer offer”. We will work on matching you to another project.
 
 Please let me know if you have any questions or concerns.
 
