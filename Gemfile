@@ -107,4 +107,4 @@ gem 'config'
 gem 'iso_country_codes', '~> 0.7.8'
 
 # Raygun
-gem 'raygun4ruby'
+gem 'raygun4ruby', '>= 3.2.1'
