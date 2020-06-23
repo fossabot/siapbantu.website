@@ -29,7 +29,14 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "husky": "^4.2.5"
   },
-  "snyk": true
+  "husky": {
+    "hooks": {
+      "pre-commit": "bundle exec rubocop -a"
+    }
+  },
+  "snyk": true,
+  "license": "MIT"
 }
