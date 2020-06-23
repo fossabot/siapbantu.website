@@ -21,6 +21,11 @@ if Rails.env.development? || Rails.env.test?
   Dotenv::Railtie.load
 end
 
+# Sentry DSN
+Raven.configure do |config|
+  config.dsn = 'https://d5596036fcf741819048d4a56bcf5435:51250589b6bb4849b464c009222c10b8@o387669.ingest.sentry.io/5287110'
+end
+
 module CovidVolunteers
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
