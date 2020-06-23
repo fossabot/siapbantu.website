@@ -138,7 +138,7 @@ If you feel that you are not the right fit after speaking with the project owner
 Please let me know if you have any questions or concerns.
 
 Thank you!
-HWC Core team`;
+Siapbantu Core team`;
 
     const mailHref=`mailto:${projectOwnerEmail}?reply-to=${projectOwnerEmail}&bcc=${volunteerEmails.join(',').replace(/\+/g, '%2B')}&subject=${subject}&body=${body.replace(/\n/g, '%0D%0A').replace(/\+/g, '%2B')}`;
     window.open(mailHref, '_blank');
