@@ -440,7 +440,7 @@ DEPENDENCIES
   puma (~> 4.3, >= 4.3.5)
   rails (~> 6.0.3, >= 6.0.3.1)
   rails-controller-testing (>= 1.0.4)
-  raygun4ruby
+  raygun4ruby (>= 3.2.1)
   redis (~> 4.0)
   rinku
   rspec-rails (~> 4.0.0.0)
