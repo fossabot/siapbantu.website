@@ -118,7 +118,7 @@ const VolunteerGroups = {
       }
     });
 
-    const subject = `[Help With Covid] Greetings - Project/Volunteers Introduction`;
+    const subject = `[Siapbantu] Greetings - Project/Volunteers Introduction`;
 
     let volunteersBody = [];
     for (const volunteer of volunteers) {

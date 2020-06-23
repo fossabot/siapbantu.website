@@ -40,7 +40,7 @@ class OfficeHour < ApplicationRecord
       e.dtstart = self.start_at
       e.dtend = self.end_at
       e.summary = "HWC Office Hour #{self.user.name.split(' ')[0]} #{self.participant.name.split(' ')[0]}"
-      e.organizer = Icalendar::Values::CalAddress.new('mailto:helpwithcovid@gmail.com', cn: 'helpwithcovid@gmail.com')
+      e.organizer = Icalendar::Values::CalAddress.new('mailto:siapbantu.indonesia@gmail.com', cn: 'siapbantu.indonesia@gmail.com')
 
       [ self.user, self.participant ].each do |user|
         attendee_params = {
