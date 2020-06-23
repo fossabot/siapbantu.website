@@ -111,5 +111,5 @@ gem 'raygun4ruby', '>= 3.2.1'
 
 # Raygun APM
 group :production do
-  gem 'raygun-apm'
+  gem 'raygun-apm-rails'
 end
