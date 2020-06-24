@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD014 MD033 MD041 -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -23,6 +23,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://shitiomatic.tech/"><img src="https://avatars3.githubusercontent.com/u/60742616?v=4" width="100px;" alt=""/><br /><sub><b>Ahmad Ainul Rizki</b></sub></a><br /><a href="https://github.com/siapbantu/siapbantu.website/commits?author=shitiomatic" title="Code">💻</a> <a href="#maintenance-shitiomatic" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/racheloveyou"><img src="https://avatars2.githubusercontent.com/u/60867931?v=4" width="100px;" alt=""/><br /><sub><b>Rachel Lin</b></sub></a><br /><a href="#content-racheloveyou" title="Content">🖋</a> <a href="#design-racheloveyou" title="Design">🎨</a></td>
   </tr>
 </table>
 
