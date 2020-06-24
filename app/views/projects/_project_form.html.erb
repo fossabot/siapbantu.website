@@ -5,14 +5,14 @@
         <%= title %>
       </h3>
       <p class="mt-1 max-w-2xl text-sm leading-5 text-gray-500">
-        This information will be displayed publicly.
+        Informasi ini akan ditampilkan untuk umum.
       </p>
     </div>
 
     <div class="mt-6 sm:mt-5">
       <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
         <label for="name" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-          Name
+          Nama Project
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
           <div class="max-w-lg flex rounded-md shadow-sm">
@@ -23,31 +23,31 @@
 
       <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
         <label for="short_description" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-          Describe your project in a tweet
+          Jelaskan project kamu dengan singkat
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
           <div class="max-w-lg flex rounded-md shadow-sm">
             <%= f.text_field "short_description", maxlength: 129, class: "form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5", required: true %>
           </div>
-          <p class="mt-2 text-sm text-gray-500">A brief description about your project (max 129 characters).</p>
+          <p class="mt-2 text-sm text-gray-500">Deskripsi singkat tentang project kamu (maks 129 karakter).</p>
         </div>
       </div>
 
       <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
         <label for="description" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-          Describe your project.
+          Jelaskan project kamu.
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
           <div class="max-w-lg flex rounded-md shadow-sm">
             <%= f.text_area "description", rows: 3, class: "form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5", required: true %>
           </div>
-          <p class="mt-2 text-sm text-gray-500">Write a few sentences about what you are making and the end goal.</p>
+          <p class="mt-2 text-sm text-gray-500">Tulis beberapa kalimat tentang apa yang kamu buat dan tujuan akhirnya.</p>
         </div>
       </div>
 
       <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
         <label for="image" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px">
-          Image<br/>
+          Banner<br/>
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
           <% if @project.image.present? %>
@@ -66,7 +66,7 @@
             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
               <div>
                 <legend class="text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700">
-                  Project type
+                  Jenis project
                 </legend>
               </div>
               <div class="mt-4 sm:mt-0 sm:col-span-2">
@@ -96,7 +96,7 @@
             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
               <div>
                 <legend class="text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700">
-                  Project status
+                  Status project
                 </legend>
               </div>
               <div class="mt-4 sm:mt-0 sm:col-span-2">
@@ -115,37 +115,37 @@
 
       <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
         <label for="participants" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-          Who is already working on this?
+          Siapa yang sudah mengerjakan project ini?
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
           <div class="max-w-lg flex rounded-md shadow-sm">
             <%= f.text_area "participants", rows: 3, class: "form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5", required: true %>
           </div>
-          <p class="mt-2 text-sm text-gray-500">Tell volunteers about you and your teammates.</p>
+          <p class="mt-2 text-sm text-gray-500">Beri tahu kami tentang kamu dan rekan satu team-mu.</p>
         </div>
       </div>
 
       <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
         <label for="progress" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-          How far along are you?
+          Seberapa jauh project-mu?
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
           <div class="max-w-lg flex rounded-md shadow-sm">
             <%= f.text_area "progress", rows: 3, class: "form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5", required: true %>
           </div>
-          <p class="mt-2 text-sm text-gray-500">Tell volunteers about the progress you've made.</p>
+          <p class="mt-2 text-sm text-gray-500">Beri tahu kami tentang kemajuan yang telah kamu buat.</p>
         </div>
       </div>
 
       <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
         <label for="docs_and_demo" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-          Do you have a demo or extra documentation?
+          Apakah kamu memiliki demo atau dokumentasi tambahan?
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
           <div class="max-w-lg flex rounded-md shadow-sm">
             <%= f.text_area "docs_and_demo", rows: 3, class: "form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5", required: true %>
           </div>
-          <p class="mt-2 text-sm text-gray-500">Demo can be anything that shows volunteers how the product works. Docs/mockups are also OK.</p>
+          <p class="mt-2 text-sm text-gray-500">Demo dapat berupa apa saja yang menunjukkan kepada kami bagaimana produk bekerja. Docs/mockup juga BOLEH.</p>
         </div>
       </div>
 
@@ -154,7 +154,7 @@
           <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
             <div>
               <legend class="text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700">
-              Target Country
+              Negara Target
               </legend>
             </div>
             <div class="mt-4 sm:mt-0 sm:col-span-2">
@@ -165,7 +165,7 @@
                   </label>
                 </div>
               </div>
-              <p class="mt-2 text-sm text-gray-500">Is this project only targeting people in a specific country?</p>
+              <p class="mt-2 text-sm text-gray-500">Apakah proyek ini hanya menargetkan orang di negara tertentu?</p>
             </div>
           </div>
         </div>
@@ -173,40 +173,40 @@
 
       <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
         <label for="target_location" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-          Target Location<br/>
-          <span class="text-xs">(optional)</span>
+          Lokasi Target<br/>
+          <span class="text-xs">(tidak wajib)</span>
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
           <div class="max-w-lg flex rounded-md shadow-sm">
             <%= f.text_field "target_location", class: "flex-1 form-input block w-full rounded-none rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5", required: false %>
           </div>
-          <p class="mt-2 text-sm text-gray-500">Specific state, province or city within that country?</p>
+          <p class="mt-2 text-sm text-gray-500">Negara bagian, provinsi, atau kota tertentu di negara itu?</p>
         </div>
       </div>
 
       <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
         <label for="contact" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-          Best way to get in touch<br/>
-          <span class="text-xs">(optional)</span>
+          Cara terbaik untuk berkomunikasi<br/>
+          <span class="text-xs">(tidak wajib)</span>
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
           <div class="max-w-lg flex rounded-md shadow-sm">
             <%= f.text_field "contact", class: "flex-1 form-input block w-full rounded-md transition duration-150 ease-in-out sm:text-sm sm:leading-5" %>
           </div>
-          <p class="mt-2 text-sm text-gray-500">You'll get an email when a volunteer applies, but perhaps there is another way, like email or discord.</p>
+          <p class="mt-2 text-sm text-gray-500">Anda akan mendapatkan email saat ada yang ingin bergabung, tetapi mungkin ada cara lain, seperti email atau discord?</p>
         </div>
       </div>
 
       <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
         <label for="links" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-          Helpful links<br/>
-          <span class="text-xs">(optional)</span>
+          Tautan yang bermanfaat<br/>
+          <span class="text-xs">(tidak wajib)</span>
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
           <div class="max-w-lg flex rounded-md shadow-sm">
             <%= f.text_area "links", rows: 3, class: "form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5", required: false %>
           </div>
-        <p class="mt-2 text-sm text-gray-500">Any other relevant links, for instance GitHub or social media (Twitter/Facebook). One per line.</p>
+        <p class="mt-2 text-sm text-gray-500">Tautan lain yang relevan, misalnya GitHub atau media sosial (Twitter/Facebook). Satu per baris.</p>
         </div>
       </div>
     </div>
@@ -215,10 +215,10 @@
   <div class="mt-8 border-t border-gray-200 pt-8 sm:mt-5 sm:pt-10">
     <div>
       <h3 class="text-lg leading-6 font-medium text-gray-900">
-        Volunteer Information
+        Informasi Untuk Kolaborator
       </h3>
       <p class="mt-1 max-w-2xl text-sm leading-5 text-gray-500">
-        Tell us what you are looking for in volunteers.
+        Beri tahu kami apa yang kamu cari di kolaborator.
       </p>
     </div>
 
@@ -229,20 +229,20 @@
             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
               <div>
                 <legend class="text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700">
-                  Are you actively looking for volunteers?
+                  Apakah kamu secara aktif mencari kolaborator?
                 </legend>
-                <div class="text-sm text-gray-500">You can always change this later</div>
+                <div class="text-sm text-gray-500">Kamu selalu dapat mengubahnya nanti</div>
               </div>
               <div class="mt-4 sm:mt-0 sm:col-span-2">
                 <div class="max-w-lg">
                   <div class="block">
                     <%= f.radio_button :accepting_volunteers, true, checked: @project.new_record? ? true : @project.accepting_volunteers, class: "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" %>
-                    <%= f.label :accepting_volunteers, "Yes - Volunteers will be able to apply.", value: "true", class: "pl-2 text-sm text-gray-700"  %>
+                    <%= f.label :accepting_volunteers, "Iya - Kolaborator akan dapat mendaftar.", value: "true", class: "pl-2 text-sm text-gray-700"  %>
                   </div>
 
                   <div class="block">
                     <%= f.radio_button :accepting_volunteers, false, class: "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" %>
-                    <%= f.label :accepting_volunteers, "No - We have all the people and resources we need at the moment.", value: "false", class: "pl-2 text-sm text-gray-700" %>
+                    <%= f.label :accepting_volunteers, "Tidak - Kami memiliki semua orang dan sumber daya yang kami butuhkan saat ini.", value: "false", class: "pl-2 text-sm text-gray-700" %>
                   </div>
                 </div>
               </div>
@@ -253,13 +253,13 @@
 
       <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5 is-accepting-volunteers">
         <label for="looking_for" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-          What tasks need to get done?
+          Tugas apa yang perlu dilakukan?
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
           <div class="max-w-lg flex rounded-md shadow-sm">
             <%= f.text_area "looking_for", rows: 3, class: "form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5", required: false %>
           </div>
-          <p class="mt-2 text-sm text-gray-500">Tell volunteers how they might help you. Be specific. If it's tech mention the stack.</p>
+          <p class="mt-2 text-sm text-gray-500">Beri tahu kolaborator bagaimana mereka dapat membantu kamu. Tulis secara spesifik. Jika berhubungan dengan teknologi harap sebutkan stack-nya.</p>
         </div>
       </div>
 
@@ -269,7 +269,7 @@
             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
               <div>
                 <legend class="text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700">
-                  Skills needed
+                  Keterampilan yang dibutuhkan
                 </legend>
               </div>
               <div class="mt-4 sm:mt-0 sm:col-span-2">
@@ -299,7 +299,7 @@
             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
               <div>
                 <legend class="text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700">
-                  Number of volunteers needed
+                  Jumlah kolaborator yang dibutuhkan
                 </legend>
               </div>
               <div class="mt-4 sm:mt-0 sm:col-span-2">
@@ -325,13 +325,13 @@
 
       <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5 is-accepting-volunteers">
         <label for="volunteer_location" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-          Volunteer Location
+          Lokasi Kolaborator
         </label>
         <div class="mt-1 sm:mt-0 sm:col-span-2">
           <div class="max-w-lg flex rounded-md shadow-sm">
             <%= f.text_field "volunteer_location", class: "flex-1 form-input block w-full rounded-none rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5", required: false %>
           </div>
-          <p class="mt-2 text-sm text-gray-500">Do volunteers need to live in a certain location? Write remote otherwise.</p>
+          <p class="mt-2 text-sm text-gray-500">Apakah kolaborator perlu tinggal di lokasi tertentu? Tulis "remote" jika tidak.</p>
         </div>
       </div>
 
@@ -341,7 +341,7 @@
             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
               <div>
                 <legend class="text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700">
-                  Organization status
+                  Status Organisasi
                 </legend>
               </div>
               <div class="mt-4 sm:mt-0 sm:col-span-2">
@@ -359,30 +359,18 @@
                           <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
                         </svg>
                       </div>
-                      You are about to select <span class="text-orange-400">for-profit</span> for your project
+                      Kamu akan memilih <span class="text-orange-400">for-profit</span> untuk project
                     </div>
                     <div class="text-xs text-gray-500">
-                      <div class="mt-4">The U.S. Department of Labor has indicated that, under the Fair Labor Standards Act, volunteers may not provide services to for-profit private sector employers.</div>
+                      <div class="mt-4">Khusus untuk kategori <span class="text-orange-400">for-profit</span> Anda harus menyetujui bahwa kami tidak bisa diajak dan dipaksa bersangkutan dalam kegiatan bisnis Anda.</div>
 
-                      <div class="mt-4">Please consult the relevant rules in your country and your own legal counsel before soliciting volunteers for a funded project.</div>
+                      <div class="mt-4">Karena tujuan kami adalah berkolaborasi tanpa ada ikatan kontrak kerja, dan secara sukarelawan.</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </fieldset>
-        </div>
-      </div>
-
-      <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5 is-non-profit is-accepting-volunteers">
-        <label for="ein" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-          Your non-profit EIN
-        </label>
-        <div class="mt-1 sm:mt-0 sm:col-span-2">
-          <div class="max-w-lg flex rounded-md shadow-sm">
-            <%= f.text_field "ein", maxlength: 129, class: "form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" %>
-          </div>
-          <p class="mt-2 text-sm text-gray-500">This is important to a lot of volunteers. Write 'not US based' if outside of the USA.</p>
         </div>
       </div>
     </div>

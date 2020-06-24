@@ -29,14 +29,6 @@ const ProjectForm = {
       $('#project_looking_for').removeAttr('required');
     }
 
-    if ($('#project_organization_status').val() == 'Non-profit') {
-      $('.is-non-profit').show();
-      $('#project_ein').attr('required', 'required');
-    } else {
-      $('.is-non-profit').hide();
-      $('#project_ein').removeAttr('required');
-    }
-
     if ($('#project_organization_status').val() == 'For-profit') {
       $('.for-profit-warning').show();
     } else {

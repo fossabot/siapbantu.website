@@ -384,12 +384,6 @@
                   <% if @project.organization_status.present? %>
                     <div class="flex items-end">
                       <%= @project.organization_status %>
-
-                      <% if @project.organization_status == "Non-profit" && @project.ein.present? %>
-                        <span class="ml-1">
-                          (EIN: <%= @project.ein %>)
-                        </span>
-                      <% end %>
                     </div>
                   <% else %>
                     <div class="flex items-end">

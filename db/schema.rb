@@ -86,7 +86,6 @@ ActiveRecord::Schema.define(version: 2020_05_27_191511) do
     t.string "target_location", default: "", null: false
     t.integer "cover_photo_id"
     t.string "organization_status", default: "", null: false
-    t.string "ein"
   end
 
   create_table "success_stories", force: :cascade do |t|
