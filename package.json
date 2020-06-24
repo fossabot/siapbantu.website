@@ -4,6 +4,8 @@
   "scripts": {
     "deploy-staging": "git push heroku-staging $(git rev-parse --abbrev-ref HEAD):master",
     "snyk-protect": "snyk protect",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
     "prepare": "yarn run snyk-protect"
   },
   "dependencies": {
@@ -29,12 +31,13 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^3.11.0",
-    "husky": "^4.2.5"
+    "all-contributors-cli": "^6.16.0",
+    "husky": "^4.2.5",
+    "webpack-dev-server": "^3.11.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "bundle exec rubocop -a && git add ."
+      "pre-commit": "yarn contributors:generate && bundle exec rubocop -a && git add ."
     }
   },
   "snyk": true,

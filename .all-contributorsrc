@@ -1,0 +1,25 @@
+{
+  "projectName": "siapbantu.website",
+  "projectOwner": "siapbantu",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "eslint",
+  "contributors": [
+    {
+      "login": "shitiomatic",
+      "name": "Ahmad Ainul Rizki",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/60742616?v=4",
+      "profile": "https://shitiomatic.tech/",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
