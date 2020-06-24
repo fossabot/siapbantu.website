@@ -52,7 +52,7 @@ RSpec.describe Project, type: :model do
     end
 
     it 'project defaults to medical with no type' do
-      expect(project.category).to eq('Community')
+      expect(project.category).to eq('Komunitas')
     end
 
     it 'returns correct cover photo' do
