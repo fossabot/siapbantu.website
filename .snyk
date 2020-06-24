@@ -1006,3 +1006,7 @@ patch:
         patched: '2020-06-23T12:13:18.847Z'
     - '@rails/webpacker > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
         patched: '2020-06-23T12:13:18.847Z'
+    - all-contributors-cli > lodash:
+        patched: '2020-06-24T10:25:12.634Z'
+    - all-contributors-cli > inquirer > lodash:
+        patched: '2020-06-24T10:25:12.634Z'
