@@ -12,10 +12,10 @@
         </button>
       <% end %>
     </div>
-    <div class="text-indigo-700 mt-4">We are <%= number_with_delimiter @project_count %>+ projects and <%= number_with_delimiter @volunteer_count %>+ volunteers strong.</div>
+    <div class="text-indigo-700 mt-4">Sudah ada <%= number_with_delimiter @project_count %>+ karya dan <%= number_with_delimiter @volunteer_count %>+ manusia yang terdaftar.</div>
   </div>
 
-  <!-- Featured projects -->
+  <!-- Karya Terpopuler -->
   <div class="relative container z-10 pb-4">
     <%= render partial: 'partials/featured-projects', locals: {projects: @featured_projects, category: nil} %>
   </div>
