@@ -52,6 +52,37 @@
     </div>
 
     <div class="sm:mx-auto sm:w-full sm:max-w-lg">
+      <div class="shit-parent-class">
+        <p class="mt-8 text-center text-sm leading-5 text-gray-600 max-w">
+          This website has <span id="pageviews"></span> page views in the last month.
+        </p>
+        <div
+          class="shit-graph-class"
+          data-sa-graph-url="https://simpleanalytics.com/siapbantu.com?color=75b5aa"
+          data-sa-page-views-selector="#pageviews"
+        >
+          <p class="mt-8 text-center text-sm leading-5 text-gray-600 max-w">
+            Ad blockers don't like the Simple Analytics embed, disable yours to view
+            this graph.
+          </p>
+        </div>
+      </div>
+
+      <script src="https://scripts.simpleanalyticscdn.com/embed.js"></script>
+
+      <style>
+        .shit-parent-class {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .shit-graph-class {
+          align-self: stretch;
+        }
+      </style>
+    </div>
+
+    <div class="sm:mx-auto sm:w-full sm:max-w-lg">
       <p class="mt-8 text-center text-sm leading-5 text-gray-600 max-w">
         Started based on a discussion between Ahmad Ainul Rizki &amp; The People.
       </p>
