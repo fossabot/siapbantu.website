@@ -1,11 +1,14 @@
+<div align="center">
+
+[![Siapbantu](assets/SiapbantuLogo.png)](https://siapbantu.com)
+
 <!-- markdownlint-disable MD014 MD033 MD041 -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-<div align="center">
-
-[![Siapbantu](assets/SiapbantuLogo.png)](https://siapbantu.com)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/siapbantu/siapbantu.website?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/siapbantu/siapbantu.website?style=for-the-badge)
+![Open Collective backers and sponsors](https://img.shields.io/opencollective/all/siapbantu?style=for-the-badge)
 
 </div>
 
