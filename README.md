@@ -6,6 +6,9 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+![Website](https://img.shields.io/website?down_message=offline&label=web%20status&style=flat-square&up_message=online&url=https%3A%2F%2Fsiapbantu.com)
+![GitHub](https://img.shields.io/github/license/siapbantu/siapbantu.website?style=flat-square)
+
 ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/siapbantu/siapbantu.website?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/siapbantu/siapbantu.website?style=for-the-badge)
 ![Open Collective backers and sponsors](https://img.shields.io/opencollective/all/siapbantu?style=for-the-badge)
