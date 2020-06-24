@@ -57,7 +57,7 @@ RSpec.describe Project, type: :model do
 
     it 'returns correct cover photo' do
       project.project_type_list.add('Reduce spread')
-      expect(project.cover_photo).to eq('/images/prevention-default.jpg')
+      expect(project.cover_photo).to eq('/images/pendidikan-default.jpg')
     end
 
     it 'allow override of default cover photo' do
