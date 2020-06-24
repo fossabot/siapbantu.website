@@ -11,7 +11,7 @@ default: &default
 
 development:
   <<: *default
-  database: covid_development
+  database: startup_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,8 +19,8 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
-  database: covid_test
+  database: startup_test
 
 production:
   <<: *default
-  database: covid_production
+  database: startup_production
