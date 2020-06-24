@@ -29,6 +29,16 @@
         "content",
         "design"
       ]
+    },
+    {
+      "login": "lasarasati",
+      "name": "Lala Sarasati",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/67370251?v=4",
+      "profile": "https://github.com/lasarasati",
+      "contributions": [
+        "business",
+        "projectManagement"
+      ]
     }
   ],
   "contributorsPerLine": 7
