@@ -4,11 +4,11 @@
     <div class="flex flex-1 flex-col lg:flex-row items-center justify-between w-full lg:mr-4 mb-4 lg:mb-0">
       <div class="flex flex-col sm:flex-row flex-1 w-full">
         <% if @show_search_bar %>
-          <div class="font-bold mb-2 sm:mb-0 lg:mb-0 mr-2 whitespace-no-wrap text-center sm:text-auto sm:flex items-center">Search</div>
+          <div class="font-bold mb-2 sm:mb-0 lg:mb-0 mr-2 whitespace-no-wrap text-center sm:text-auto sm:flex items-center">Pencarian</div>
           <div class="w-full sm:w-64 mr-4 block flex mb-4 sm:mb-0">
             <%= form_with url: filter_path, local: true, method: :get, html: {'x-ref': 'searchForm'}, class: 'w-full flex' do |form| %>
               <div class="relative rounded flex-1">
-                <%= form.text_field :query, placeholder: "Search", value: params[:query], class: "form-input block w-full sm:text-sm sm:leading-5 pr-7 shadow-sm lg:h-full" %>
+                <%= form.text_field :query, placeholder: "Pencarian", value: params[:query], class: "form-input block w-full sm:text-sm sm:leading-5 pr-7 shadow-sm lg:h-full" %>
                 <div class="absolute inset-auto right-0 top-0 cursor-pointer" @click="$refs.searchForm.submit()">
                   <%= inline_svg_pack_tag('media/svgs/search-outline.svg', class: 'translate-y-1/2 mr-2 h-4 inline-block', style: 'margin-top: 10px;') %>
                 </div>
