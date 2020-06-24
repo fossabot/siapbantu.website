@@ -1,23 +1,23 @@
 project_categories:
-  - name: Medical
-    slug: medical
-    body: Support our overwhelmed health systems with medical innovation.
+  - name: Medis
+    slug: medis
+    body: Dukung sistem kesehatan kami yang luar biasa dengan berinovasi di bagian medis.
     project_types:
       - Scale testing
       - Medical facilities
       - Medical equipments
       - Treatment R&D
     color: purple
-  - name: Prevention
-    slug: prevention
-    body: Inform, reduce, and control the spread of the outbreak.
+  - name: Pendidikan
+    slug: pendidikan
+    body: Ayo saling berkolaborasi dalam berinovasi mencerdaskan bangsa kita sendiri.
     project_types:
       - Track the outbreak
       - Reduce spread
     color: orange
-  - name: Community
-    slug: community
-    body: Work together to help our stressed communities.
+  - name: Komunitas
+    slug: komunitas
+    body: Bekerja bersama untuk membantu komunitas kita yang sedang tertekan.
     project_types:
       - E-Learning
       - Job placement
