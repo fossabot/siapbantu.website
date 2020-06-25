@@ -1,6 +1,7 @@
 <div align="center">
 
 [![Siapbantu](assets/SiapbantuLogo.png)](https://siapbantu.com)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsiapbantu%2Fsiapbantu.website.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsiapbantu%2Fsiapbantu.website?ref=badge_shield)
 
 <!-- markdownlint-disable MD014 MD033 MD041 -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -44,3 +45,6 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 [MIT License, Copyright (c) 2020 Siapbantu](https://github.com/siapbantu/siapbantu.website/blob/master/LICENSE)
 
 [all-contributors]: https://github.com/all-contributors/all-contributors
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsiapbantu%2Fsiapbantu.website.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsiapbantu%2Fsiapbantu.website?ref=badge_large)
