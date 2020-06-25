@@ -237,7 +237,7 @@ RSpec.describe Users::RegistrationsController, type: :controller do
     it 'displays form' do
       get :new
 
-      expect(response.body).to include('Sign up for an account')
+      expect(response.body).to include('Daftar Sekarang Juga')
     end
   end
 
