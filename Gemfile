@@ -113,3 +113,6 @@ gem 'raygun4ruby', '>= 3.2.1'
 group :production do
   gem 'raygun-apm-rails'
 end
+
+# Uglifier
+gem 'uglifier'

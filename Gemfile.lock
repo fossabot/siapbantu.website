@@ -170,6 +170,7 @@ GEM
       dry-initializer (~> 3.0)
       dry-schema (~> 1.5)
     erubi (1.9.0)
+    execjs (2.7.0)
     factory_bot (6.0.2)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.0.0)
@@ -361,6 +362,8 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     unicode-display_width (1.7.0)
     warden (1.2.8)
       rack (>= 2.0.6)
@@ -427,6 +430,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
   tzinfo-data
+  uglifier
   web-console (>= 4.0.1)
   webdrivers
   webpacker (~> 4.2, >= 4.2.2)

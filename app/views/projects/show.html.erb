@@ -333,6 +333,27 @@
             </div>
           <% end %>
         </div>
+
+        <div class="mt-8 bg-white overflow-hidden rounded-lg shadow">
+          <div class="p-4 sm:px-6 sm:py-3 bg-purple-100 border-b border-indigo-400">
+            <h3 class="text-indigo-700 font-bold">Komentar</h3>
+          </div>
+
+          <div id="graphcomment"></div>
+          <script type="text/javascript">
+            window.gc_params = {
+              graphcomment_id: 'siapbantu',
+
+              fixed_header_height: 0,
+            };
+
+            (function() {
+              var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+              gc.src = 'https://graphcomment.com/js/integration.js?' + Math.round(Math.random() * 1e8);
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+            })();
+          </script>
+        </div>
       </div>
 
       <div class="mt-8 sm:col-span-1 sm:mt-0">
