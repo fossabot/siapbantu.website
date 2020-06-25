@@ -39,6 +39,6 @@ module CovidVolunteers
     # From: https://blog.alex-miller.co/rails/2017/01/07/rails-authenticity-token-and-mobile-safari.html.
     config.action_dispatch.default_headers['Cache-Control'] = 'no-store, no-cache'
 
-    config.time_zone = 'Pacific Time (US & Canada)'
+    config.time_zone = 'Jakarta'
   end
 end

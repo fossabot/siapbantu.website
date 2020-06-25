@@ -33,7 +33,7 @@ class ProjectsController < ApplicationController
       format.html do
         @projects_header = 'COVID-19 projects looking for volunteers'
         @projects_subheader = 'New or established projects helping with the COVID-19 crisis that need help. Volunteer yourself or create a new one.'
-        @page_title = 'All Projects'
+        @page_title = 'Semua Project'
 
         @projects = @projects.page(params[:page]).per(24)
 
@@ -54,9 +54,9 @@ class ProjectsController < ApplicationController
     @index_from = (@projects.prev_page || 0) * @projects.current_per_page + 1
     @index_to = [@index_from + @projects.current_per_page - 1, @projects.total_count].min
 
-    @projects_header = 'Volunteered Projects'
-    @projects_subheader = 'These are the projects where you volunteered.'
-    @page_title = 'Volunteered Projects'
+    @projects_header = 'Project Kolaborasi'
+    @projects_subheader = 'Ini adalah project tempat kamu berkontribusi.'
+    @page_title = 'Project Kolaborasi'
     render action: 'index'
   end
 
@@ -68,9 +68,9 @@ class ProjectsController < ApplicationController
     @index_from = (@projects.prev_page || 0) * @projects.current_per_page + 1
     @index_to = [@index_from + @projects.current_per_page - 1, @projects.total_count].min
 
-    @projects_header = 'Own Projects'
-    @projects_subheader = 'These are the projects you created.'
-    @page_title = 'Own Projects'
+    @projects_header = 'Project Saya'
+    @projects_subheader = 'Ini adalah proyek yang kamu buat.'
+    @page_title = 'Project Saya'
     render action: 'index'
   end
 
